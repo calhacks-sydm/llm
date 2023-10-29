@@ -1,0 +1,144 @@
+[
+    {
+        "question_id": "Fall_2017_1",
+        "topic": "Algorithms",
+        "question_description": "1. For every real 0 <a <1, 77, 2! is O(1) in terms of n asymptotically.\n\nc2a9 True\n\nc2a9 False",
+        "answer": "False",
+        "hint": "Consider the growth rate of 77, 2! as n approaches infinity.",
+        "subproblem": [
+            {
+                "problem_order": "1.1",
+                "description": "Prove that 77, 2! is not O(1) in terms of n asymptotically."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2017_2",
+        "topic": "Algorithms",
+        "question_description": "2. Dijkstra e2 80 99s algorithm (without any modification) can be used to compute the shortest path between\n2 vertices in a DAG with exactly one edge having a negative weight (all other edges have a positive\nweight).\n\n c2 a9 True\nO False",
+        "answer": "False",
+        "hint": "Consider the limitations of Dijkstra's algorithm in handling negative edge weights.",
+        "subproblem": [
+            {
+                "problem_order": "2.1",
+                "description": "Explain why Dijkstra's algorithm may not give the correct answer in this scenario."
+            },
+            {
+                "problem_order": "2.2",
+                "description": "Propose an alternative approach to compute the correct answer in this scenario."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2017_3",
+        "topic": "Algorithms",
+        "question_description": "3. A bipartite graph can contain a simple cycle that consists of an odd number of unique vertices.\n c2 a9 True\n c2 a9 False",
+        "answer": "False",
+        "hint": "Consider the definition of a bipartite graph and the properties of cycles.",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2017_4",
+        "topic": "Algorithms",
+        "question_description": "4. If a bipartite graph has a perfect matching of size n, then the minimum vertex cover of this graph\nmust be also be of size equal to n. (A perfect matching is a bijective pairing of vertices).\n\n c2 a9 True\n c2 a9 False",
+        "answer": "True",
+        "hint": "Consider the relationship between perfect matchings and vertex covers in bipartite graphs.",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2017_5",
+        "topic": "Algorithms",
+        "question_description": "5. It is possible that one-way permutations exist and P = NP.\n\n c2 a9 True\n\nO False",
+        "answer": "False",
+        "hint": "Consider the implications of one-way permutations and the complexity class P vs NP.",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2017_6",
+        "topic": "Algorithms",
+        "question_description": "6. For every odd prime p and every integer a e2 82 ac {1,...,.p e2 80 94 1}, a c2 ae~)/? is either 1 or -1 modulo p.\n\n c2 a9 True\n\n c2 a9 False",
+        "answer": "True",
+        "hint": "Consider the properties of modular arithmetic and the definition of a prime number.",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2017_7",
+        "topic": "Algorithms",
+        "question_description": "7. It is possible that problem A reduces to problem B, problem B reduces to problem C, problem C\nreduces to problem A, problem A is NP-complete and problem B is in P. (Assuming P # NP)\n\n c2 a9 True\nO False",
+        "answer": "False",
+        "hint": "Consider the implications of problem reductions and the complexity classes NP and P.",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2017_8",
+        "topic": "Algorithms",
+        "question_description": "8. Doubling the capacities of all edges of a graph G doubles the maximum flow.\n\n c2 a9 True\n\nO False",
+        "answer": "True",
+        "hint": "Consider the definition of maximum flow and the effect of edge capacities on flow.",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2017_9",
+        "topic": "Algorithms",
+        "question_description": "9. Factoring is known to be NP-hard.\n\n c2 a9 True\nO False",
+        "answer": "False",
+        "hint": "Consider the complexity class NP and the problem of factoring.",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2017_10",
+        "topic": "Algorithms",
+        "question_description": "10. Consider a graph with exactly one edge having rational capacity and all other edges having integral\ncapacities. The max flow in this graph must be integral.\n\n c2 a9 True\n\nO False",
+        "answer": "False",
+        "hint": "Consider the properties of rational and integral numbers in the context of maximum flow.",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2017_11",
+        "topic": "Algorithms",
+        "question_description": "11. The maximum weight edge in a cut of the graph can never be a part of a MST.\n\n c2 a9 True\n\nO False",
+        "answer": "False",
+        "hint": "Consider the definition of a minimum spanning tree and the properties of edge weights.",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2017_12",
+        "topic": "Algorithms",
+        "question_description": "12. When asked for a bound, always give the tightest bound possible. Some ques-\ntions have choices in parentheses after the answer box\n\n1. (4 points) The node that receives the highest | post\n\n(pre/post) number in\n\na depth-first search must lie in a | source\n\n(source/sink) strongly connected\n\ncomponent.\n\n2. (2 points) If an undirected graph with no duplicate edges has a cycle then it must have at least\n\n3 edges.\n\n3. (2 points) The space complexity of the Floyd-Warshall algorithm (all-pairs shortest path dynamic\n\nrogramming algorithm) is | O(n?) or O(n*)\n\n, where n and m are the number\n\nof vertices and edges in the graph, respectively.\n\n4. (2 points) Let x = BERKELEY and y = BARKELY and E(i,j) be the edit distance between\n\n8\nrary\n\ni] and y[1---j]. Then, E(2,3) =]2\n\non\nnN\n\noints) Continuing from above, E(8,7) =|2\n\n6. (2 points) A degree d polynomial is uniquely characterized by its values at any] d+ 1\n\npoints.\n\n7. (2 points) A directed graph has a cycle if and only if its depth-first search reveals a| back\n\n(tree/forward/back/cross) edge.\n\n8. (2 points) The size of the maximum flow in a network is always | <\n\n(<, <=,\n\n>, >) the capacity of any (s, t)-cut.\n\n9. (2 points) In union/find data structure of n items, if we use union by size without path compression then\n\na any combination of m unions and/or find operations takes at most\n\ntime.\n\nO(m log n)\n",
+        "answer": "",
+        "hint": "",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2017_13",
+        "topic": "Algorithms",
+        "question_description": "13. Consider a zero-sum game given by the following matrix (indicating the payoffs to the row player)\n\nCy | Co | C3\nR, | -2} 3 1\nRo | 3 | -1] 2\nR3 | -1 -1",
+        "answer": "",
+        "hint": "",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2017_14",
+        "topic": "Algorithms",
+        "question_description": "14. Alice has chosen a number x from {1,..., n} and Bob is trying to guess the number. Bob can ask Alice\n\nquestions of the form: Is x >i? for some i e2 82 ac {1,..., n}. For each such asked question, Alice answers YES\n\nor NO. Let p; denote the probability that Alice e2 80 99s chosen number is i. (Note that }>j_, pi = 1.)\n\nBob knows these probabilities, and would like to devise a strategy to determine Alice e2 80 99s number correctly\nwhile minimizing the expected number of questions asked.\n\nGiven the probabilities p; as input, design a dynamic programming algorithm to compute the expected\nnumber of questions needed for the best possible strategy for Bob.\n\n1. Clearly define a subproblem that could be used to efficiently solve this problem.\n\n2. What are the base cases?\n\n3. What is the recurrence relation?",
+        "answer": "",
+        "hint": "",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2017_15",
+        "topic": "Algorithms",
+        "question_description": "15. You are given a terrain map in the form of a N x N array T; namely, the value T(i, j) represent the height\nof the location (i,j). As global temperature increases, snow melts and water flows through the terrain. At\na particular coordinate, water will flow to the neighbor coordinate with the smallest height. Break ties\narbitrarily. A neighboring coordinate could be directly or diagonally adjacent. Water stops flowing at a\ncoordinate if all neighboring heights are greater or equal. These coordinates are called end coordinates.\n\nFor each coordinate (i, 7), your task is to determine the coordinate (7 e2 80 99, j e2 80 99) that the water will ultimately flow\nto starting with the coordinate (i,j). Specifically, your algorithm should output an N x N array M with the\nfollowing property. For each i,j, M{i, j] is equal to the coordinate that water will ultimately flow to starting\nwith from the coordinate (i, 7).\n\na Provide the main idea or pseudocode of your algorithm. Ideally your answer should be in bullet point\nformat.\n\nb What is the runtime in c2 a9 notation?",
+        "answer": "",
+        "hint": "",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2017_16",
+        "topic": "Algorithms",
+        "question_description": "16. In stock trading, short selling is the act of selling a stock that you don e2 80 99t own (by borrowing) with the\npromise to buy it back in the future. To profit from this, you would want to sell high first and then\nbuy low at a later date. You are given an array of stock prices in chronological order S{1..N]. Profit\noff 1 trade in the period is defined as such that i and j are indices to S.\n\nS[i]  e2 80 94 Sij],1<i<gj<n\n\nSuppose you can make up to two transactions over the period such that you have to complete the first\ntransaction before initiating the second one. You can perform Sell Buy Sell Buy, but not Sell Sell Buy\nBuy. You are allow to make 0 or 1 instead of 2 if it e2 80 99s not profitable to make 2 transactions. If you\nmake a sell action, it must be paired with a buy action with a later index.\n\nProvide an efficient algorithm to determine the largest total profit if you are allowed to make\nup to 2 trades.\n\nFor example, if S = [5,2,6,4,10,3,7], can profit 3 if you sell at 6 and buy at 3. Can profit 5 if\nyou sell at 6, buy at 4, sell at 10, and buy at 7.\n\na Provide the main idea or pseudocode of your algorithm. Ideally your answer should be in bullet\npoint format.\n\nb What is the runtime in O notation?",
+        "answer": "",
+        "hint": "",
+        "subproblem": []
+    }
+]

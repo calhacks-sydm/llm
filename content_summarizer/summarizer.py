@@ -32,5 +32,6 @@ def run_llm(query):
     qa = ConversationalRetrievalChain.from_llm(llm=llm, chain_type="map_reduce", retriever=docsearch.as_retriever(), return_source_documents=True)
     return qa({"question": query, "chat_history":""}) #no memory
 if __name__ == "__main__":
-    response=run_llm("What is Dijkstra's algorithm")
+    prompt="This is the solution to a question: Create an auxiliary node s and create edges between s and each broken room b ∈ B. Then, run BFS from source node s to generate the shortest paths between each player and the closest broken room. From here, we already know which player ends up in which broken room since the BFS will generate a tree. We can traverse the tree using DFS, keeping track of the current broken room, and any villagers or werewolves we encounter will end up in that broken room. Thus, we go through each broken room, and if there is a werewolf that ends up there, we add the number of villagers to our answer. Runtime: The initial BFS is O(|V | + |E|), and the final summation is O(|B|) = O(|V |). Thus, the overall runtime is O(|V | + |E|). What can i refer to understand this better?"
+    response=run_llm(prompt)
     print(response["answer"]) #one answer, multiple source_documents (name is shortform)

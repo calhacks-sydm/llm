@@ -1,0 +1,75 @@
+[
+    {
+        "question_id": "Fall_2021_1",
+        "topic": "Dynamic Programming",
+        "question_description": "Write a dynamic programming recurrence to count f(n,m), the number of distinct shortest paths in a 2D integer grid from (0,0) to (n,m), where n and m are positive integers. You can only travel along the x and y directions (no diagonals).",
+        "answer": "f(n,m) = f(n-1,m) + f(n,m-1)",
+        "hint": "Think about the properties of shortest paths and how they can be broken down into smaller subproblems.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Find the number of distinct shortest paths from (0,0) to (n-1,m)."
+            },
+            {
+                "problem_order": 2,
+                "description": "Find the number of distinct shortest paths from (0,0) to (n,m-1)."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2021_2",
+        "topic": "Miscellaneous",
+        "question_description": "State clearly whether the given statement is true or false and give a brief justification for your answer.\n\n(a) There exists a graph with 3 vertices such that the lowest postorder number of any DFS on the graph is not in a sink SCC.\n\n(b) Let f: N > {0,1,2,3,4} = 3x+4 (mod 5). Then H = {f}, where H constitutes of that single function f, is a universal hash family of functions: N > {0,1,2,3,4}.\n\n(c) Let the output of the Morris algorithm for an approximate counting of a stream of n numbers be ii. Then the difference between n and fi (i.e. |n - ii|) is bounded by a constant.\n\n(d) We don't need to calculate the 7th roots of unity to calculate the FFT of a length 7 vector.\n\n(e) Vi = OV",
+        "answer": "(a) False, starting a DFS from any vertex in a sink SCC will have the lowest postorder number in that SCC.\n(b) False. Pick x = 1 and y = 6. f(1) = f(6) = 2 (mod 5), for this x, y we have collision probability of 1, which makes H non-universal.\n(c) False. It's bounded by (0, | (resulting from experiencing no update every time or experiencing update every time), which grows as n grows. The only practical bound is the probability of exceeding relative error (|n - fi| < eN).\n(d) True. We pad the vector to length-8 and we use 1, 2, 4, 8th roots of unity for the calculation. We need to round up the length and pad these vectors to the nearest power of 2, 8, for FFT on length 7 vectors. (Evaluating at 7 points also works for DFT, but we can't divide-and-conquer.)\n(e) False, through L'Hopital's",
+        "hint": "Carefully analyze each statement and consider any counterexamples or proofs that can be used to determine their truth or falsehood.",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2021_3",
+        "topic": "Reductions",
+        "question_description": "State clearly whether the given statements are True, True iff P = NP, True iff P != NP, or False and give a brief justification for your answer.\n\n(a) There exists a polynomial time reduction from 3SAT to Palindrome Checking. Assume that Palindrome Checking is a program that verifies if a given word is a palindrome or not.\n\n(b) There exists a polynomial time reduction from any NP hard problem to any other NP hard problem.\n\n(c) There exists a polynomial time reduction from Palindrome Checking to 3SAT.",
+        "answer": "(a) True iff P = NP. If P = NP, we can solve 3-SAT in polynomial time by reducing it in polynomial time to some problem in P. Solve 3-SAT, then create a trivial word which is a palindrome iff the 3-SAT instance is satisfiable. This gives a polynomial time reduction from 3-SAT to Palindrome Checking. A polynomial-time reduction from 3-SAT to Palindrome Checking together with the polynomial time algorithm for Palindrome Checking implies a polynomial-time algorithm for 3-SAT and thus implies P=NP.\n(b) False. The Halting problem which is NP hard cannot be reduced to 3 SAT which is also NP hard.\n(c) True, you can solve Palindrome Checking in polynomial time and then create a trivial 3 SAT instance that evaluates to True if Palindrome Checking evaluated to True and False otherwise.",
+        "hint": "Consider the properties of reductions and how they can be used to determine the truth or falsehood of the given statements.",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2021_4",
+        "topic": "Greedy Algorithms",
+        "question_description": "The CS 170 course staff is planning a road trip to Guinland. Originally, Param was in charge of seating assignments in cars for all members of the course staff. He arranged p people in n cars where car i has capacity c_i. However, given Param's poor planning skills, he assigned people in cars terribly inefficiently leaving a lot of empty space in many cars. Given the number of people p, and the capacities of each of the n cars C_1,...,C_n, come up with an efficient greedy algorithm to fit people in cars such that the CS 170 course staff can take the least number of cars possible on the road trip.",
+        "answer": "Sort the cars in descending order of capacity and while there's unassigned people (p > 0) choose the next biggest car and assign min(c_i, p) to that car. Then update p = p - c_i.",
+        "hint": "Think about how to maximize the number of people assigned to each car while minimizing the number of cars used.",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2021_5",
+        "topic": "Graph Algorithms",
+        "question_description": "Thanks to your efforts on the project, CS 170's igloo polishing venture is flourishing! In an attempt to cut costs and further maximize profits, CS 170 now needs your help figuring out the cheapest way to get from one igloo polishing task to the next. Our clients are spread out in the vast kingdom of Guinland which consists of |V| cities. Assume that no two consecutive polishing jobs are in the same city.\n\nThe |V| cities of Guinland are connected by |E| directed edges which can be used to travel from one city to another, i.e. we can use an edge (u,v) to travel from city u to another city v. To travel from one city u to another city v we can use either cable car, snowmobiles, or trains which have strictly positive costs C_o(u,v), C_s(u,v), and C_t(u,v) respectively. If you can travel from city u to city v, you can use any of the three modes of transport, i.e. if the directed edge (u,v) exists, all 3 modes of transport will be available between u and v each with their own respective costs.\n\nUnfortunately, for some bizarre reason, we cannot take any same mode of transportation twice in a row, i.e., we cannot enter city u on a snowmobile and leave city u on a snowmobile, and the same applies for cable cars and trains. Given a directed graph representation of Guinland G = (V,E) and cities s and t, come up with an algorithm that helps us find the cheapest path between city s and city t in G and analyze its runtime. No need for a proof of correctness.",
+        "answer": "We will create a new graph G' where each city v (except s and t) is represented by three vertices: U_c, U_s, and U_t. U_c corresponds to coming to v via cable car, U_s corresponds to coming to v via snowmobile, and U_t corresponds to coming to v via train. If we can travel between cities v and u, then add the following six edges to G': (U_c, U_s), (U_c, U_t), (U_s, U_c), (U_s, U_t), (U_t, U_c), (U_t, U_s). The weights of edges are the positive costs of transportation. This construction forces the edges to satisfy the requirement that we cannot travel via the same means of transportation subsequently. Then, for each city v such that we can travel from s to v, add edges (s, U_c), (s, U_s), (s, U_t) with corresponding weights. For each vertex v from which we can travel to t, add edges (U_c, t), (U_s, t), (U_t, t) with corresponding weights. Finally, run Dijkstra's Algorithm on G' from s and return the shortest distance from s to t.",
+        "hint": "Think about how to represent the different means of transportation and how to enforce the restriction of not using the same means of transportation twice in a row.",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2021_6",
+        "topic": "Greedy Algorithms",
+        "question_description": "It's Adnaan's birthday today and the CS 170 staff are shopping presents for him in a shop. There are n items on the shopping list. The shop is doing a peculiar holiday sale: there are m \"works well together\" unordered pairs (i,j), k ∈ {1,...,m}; i,j ∈ {1,...,n}. For the k-th pair (k ∈ {1,...,m}), if you have already bought one item in the pair from the store, you are allowed to buy the other item in the pair for the price of d_k dollars instead of its original price. Given (e_x)_{1≤x≤m}, (d_x)_{1≤x≤m}, and the original price of the n items (p_x)_{1≤x≤n}, design an algorithm that outputs\n\n- the least amount of money the staff could spend to buy all n items and\n- a possible order of buying the n items that achieves this least amount of money.",
+        "answer": "Utilize the hint. We note that MST algorithms pick |V| - 1 edges in a graph with |V| vertices. Since we wish to pick n items, we create a graph with n + 1 vertices, one for each item and one \"dummy\" vertex. Then, we connect all item vertices to the dummy vertex with edge weight equal to the price of the item. We also connect \"works well together\" vertices with edge weight equal to \"works well together\" price. Note that if you possess one item in the pair, you may purchase the other item with price d_x, regardless of which item you bought first. Now we find MST in this graph. Starting from the dummy node, we perform any search to get some order to traverse the tree. We purchase in the order which we visit the vertices that represent corresponding items.",
+        "hint": "Utilize the hint given in the question to come up with a solution that minimizes the cost of buying all items.",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2021_7",
+        "topic": "Reductions",
+        "question_description": "Define the FALSY-SAT problem as follows:\n\nGiven a 3-CNF boolean formula φ, decide if there's an assignment to the variables of φ that satisfies without containing three true literals in any clause.\n\nIn other words, a FALSY-SAT instance is satisfied if and only if exactly 1 or 2 literal(s) in each clause is/are assigned to true.\n\n(a) Give a polynomial time reduction from 3SAT to FALSY-SAT by replacing each clause c_i = (a_1 V a_2 V a_3) with the two clauses (a_1 V a_2 V b_i) and (b_i V a_3 V t), where b_i is a new variable for each clause c_i and t is a single additional new variable.",
+        "answer": "The reduction is as follows: If the original clause is satisfiable because of a_1 or a_2 but not a_3, FALSY-SAT instance can set b_i to be false, making the first clause satisfied; the second clause is also satisfied with a true b_i and a false a_3. If the original clause is satisfiable because of a_3 but not a_1 and a_2, FALSY-SAT instance can set b_i to be true, making the second clause satisfied with a false b_i and a true a_3 and making the first clause satisfied with a true b_i and two false literals. The above two cases have no t involved. Nevertheless, if the original clause is satisfiable by all three literals, set b_i to be false and t to be false, we observe the new clauses are satisfiable.",
+        "hint": "Think about how to transform the original 3SAT instance into a FALSY-SAT instance by introducing new variables and clauses.",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2021_8",
+        "topic": "Approximation Algorithms",
+        "question_description": "In class we saw that there is a 2-approximation algorithm for set cover. In this problem, we will first see another approximation algorithm for set cover (part (a)), then we will discover how randomness could give us a much better algorithm (part (b) through (d)).\n\n(a) Show that if no element is contained in more than k sets, then there is a polynomial-time k-approximation algorithm for set cover by using the linear programming relaxation obtained by removing the integrality constraints. Specifically, you should describe how to obtain a solution from the relaxed linear program without integrality constraints, show your algorithm works (i.e. all items will be covered), and prove the approximation factor is k.",
+        "answer": "Algorithm: Solve the relaxed LP. For each x_i, round it up to 1 if x_i > 1/k; otherwise round it down to 0.",
+        "hint": "Think about how to use the relaxed linear program to obtain a solution that covers all items while minimizing the number of sets used.",
+        "subproblem": []
+    }
+]

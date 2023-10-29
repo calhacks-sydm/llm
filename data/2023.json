@@ -1,0 +1,212 @@
+[
+    {
+        "question_id": "Fall2020_1",
+        "topic": "Algorithms",
+        "question_description": "Are the following true or false? Provide a brief justification (1-3 sentences) for each answer.\n\n(a) If the weights of all the edges in an undirected graph are increased by 1, then the shortest path from s to every vertex (also called the shortest path tree from s) remains unchanged.\n\nFalse. e.g. consider when there are two paths from s to t, one using 3 edges of weight 1, and one using 1 edge of length 4. The weight of the first path is smaller, but it becomes larger when we add 1 to all weights.\n\n(b) If the weights of all the edges in an undirected graph are increased by 1, then the minimum spanning tree remains unchanged.\n\nTrue. Every spanning tree uses |V| - 1 edges, so the ordering of spanning trees by weight doesn't change.\n\n(c) There exists a linear program minc - x subject to Ax > b for which there is a solution with objective value 5, and for which the dual linear program has a solution with objective value 10.\n\nFalse. For a minimization LP, any dual solution's objective lower bounds any primal solution's objective.\n\n(d) If we can reduce a size-n instance of problem A to a size n* instance of problem B in O(n^d) time (including preprocessing and postprocessing) and problem B has a linear-time algorithm, then problem A has a quadratic-time algorithm.\n\nTrue. The algorithm is to run the reduction and then use the algorithm for problem B. Since the algorithm for B is linear-time and runs on a size n* instance, we get a O(n^2) overall runtime.",
+        "answer": "",
+        "hint": "",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Explain why adding 1 to all edge weights in an undirected graph does not keep the shortest path from s to every vertex unchanged."
+            },
+            {
+                "problem_order": 2,
+                "description": "Provide a justification for why increasing the weights of all edges in an undirected graph by 1 does not change the minimum spanning tree."
+            },
+            {
+                "problem_order": 3,
+                "description": "Explain why it is false that there exists a linear program with a solution of objective value 5 and a dual linear program with a solution of objective value 10."
+            },
+            {
+                "problem_order": 4,
+                "description": "Describe the algorithm for problem A if we can reduce a size-n instance of problem A to a size n* instance of problem B in O(n^d) time and problem B has a linear-time algorithm."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall2020_2",
+        "topic": "Algorithms",
+        "question_description": "Solve 4 out of the 5 subparts\n\n(a)\n\n(b)\n\n(c)\n\n(e)\n\nYou run the multiplicative weights algorithm on n experts. Recall that you are guaranteed to achieve low regret comparable to the best expert. Suppose you have n competitors, and you happen to find out that on day i, competitor k follows the advice of expert (i+k) mod n. Are you also guaranteed to achieve low regret comparable to your best competitor? If yes, explain why. If no, describe how to modify your algorithm to achieve the same regret bound against your competitors.\n\nIt does not also have low regret against these competitors. To have low regret against these n competitors, just run the multiplicative weights algorithm with the n competitors as experts.",
+        "answer": "",
+        "hint": "",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Explain whether running the multiplicative weights algorithm on n experts guarantees low regret comparable to the best expert when there are n competitors following the advice of expert (i+k) mod n."
+            },
+            {
+                "problem_order": 2,
+                "description": "Describe how to modify the algorithm to achieve low regret comparable to the best competitor when there are n competitors following the advice of expert (i+k) mod n."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall2020_3",
+        "topic": "Algorithms",
+        "question_description": "Consider the following algorithm for set cover: While there is some uncovered element, repeatedly choose an element x that hasn't been covered yet, and add all sets containing x to the set cover. Suppose that your set system has the property that no element appears in more than d sets. Show that the algorithm described above is a d-approximation algorithm.",
+        "answer": "",
+        "hint": "",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Explain the algorithm for set cover that repeatedly chooses an uncovered element and adds all sets containing that element to the set cover."
+            },
+            {
+                "problem_order": 2,
+                "description": "Prove that the algorithm described above is a d-approximation algorithm for a set system where no element appears in more than d sets."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall2020_4",
+        "topic": "Algorithms",
+        "question_description": "Fix a prime m, and recall that [m] := {0,1,2,...,m-1}. Let Maa) : [m] x [m] -> [m] be the function a,x -> (a*x) mod m. Is the hash function family {Maa) : a,b in [m]} universal? If yes, briefly justify why. If no, give an example of two inputs (x1,x2) != (y1,y2) such that Maa)(x1,x2) = Maa)(y1,y2) with probability > 1/m.",
+        "answer": "",
+        "hint": "",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Define the hash function Maa) : [m] x [m] -> [m] as a,x -> (a*x) mod m."
+            },
+            {
+                "problem_order": 2,
+                "description": "Determine whether the hash function family {Maa) : a,b in [m]} is universal."
+            },
+            {
+                "problem_order": 3,
+                "description": "If the hash function family {Maa) : a,b in [m]} is not universal, provide an example of two inputs (x1,x2) != (y1,y2) such that Maa)(x1,x2) = Maa)(y1,y2) with probability > 1/m."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall2020_5",
+        "topic": "Algorithms",
+        "question_description": "Suppose we have an algorithm A using O(log n) bits of memory that streams an n-element list L and outputs a random number k with expected value E[k] equal to the number of distinct elements in L. Describe an algorithm using O(log n) bits of memory that streams an n-element list L1, then streams an n-element list L2, and outputs a random number m with expected value E[m] equal to the number of distinct elements that appear in both L1 and L2.",
+        "answer": "",
+        "hint": "",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Explain the algorithm A that streams an n-element list L and outputs a random number k with expected value E[k] equal to the number of distinct elements in L."
+            },
+            {
+                "problem_order": 2,
+                "description": "Describe an algorithm that streams an n-element list L1, then streams an n-element list L2, and outputs a random number m with expected value E[m] equal to the number of distinct elements that appear in both L1 and L2."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall2020_6",
+        "topic": "Algorithms",
+        "question_description": "You want to multiply the two polynomials f(x) = x and g(x) = x^3 using FFT. However, you forgot to pad appropriately, and have used vectors of length 4. What would be the resulting product of f(x) - g(x) according to your algorithm? Briefly justify your answer.",
+        "answer": "",
+        "hint": "",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Explain the algorithm for multiplying two polynomials f(x) = x and g(x) = x^3 using FFT."
+            },
+            {
+                "problem_order": 2,
+                "description": "Determine the resulting product of f(x) - g(x) according to the algorithm when vectors of length 4 are used instead of padding appropriately."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall2020_7",
+        "topic": "Algorithms",
+        "question_description": "Let G = (V,E) be a directed weighted graph with possibly negative edge weights w_ij for edge (i, j). Our goal is to efficiently compute a new set of non-negative weights w_ij such that the shortest paths between any s and t remains unchanged under the change of weights - this means that we can use Dijkstra under weights w' to compute the shortest path from s to t.",
+        "answer": "",
+        "hint": "",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Explain the goal of the problem, which is to compute a new set of non-negative weights for a directed weighted graph such that the shortest paths between any s and t remains unchanged."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall2020_8",
+        "topic": "Algorithms",
+        "question_description": "Consider the following problem called Is-Different. You are given two 3-CNF (3-SAT) formulas D1, D2 over the same set of variables x1,...,Xn. You want to decide if there is some assignment of values to X1,...,Xn, such that D1 and D2 evaluate to different truth values.",
+        "answer": "",
+        "hint": "",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Explain the problem Is-Different, which involves determining if there is some assignment of values to variables x1,...,Xn that causes two 3-CNF formulas D1 and D2 to evaluate to different truth values."
+            },
+            {
+                "problem_order": 2,
+                "description": "Prove that the problem Is-Different is in NP."
+            },
+            {
+                "problem_order": 3,
+                "description": "Prove that the problem Is-Different is NP-hard."
+            },
+            {
+                "problem_order": 4,
+                "description": "Describe a polynomial-time reduction from 3-SAT to Is-Different."
+            },
+            {
+                "problem_order": 5,
+                "description": "Explain how to decide if the problem Is-Different is satisfiable given the solutions to all the subproblems."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall2020_9",
+        "topic": "Algorithms",
+        "question_description": "Consider the following variant of 3-SAT, called k-local 3-SAT. We are given a 3-SAT instance D(x1,X2,...,Xn) with m clauses, with the guarantee that xi, xj appear in the same clause only if |i - j| < k.",
+        "answer": "",
+        "hint": "",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Explain the variant of 3-SAT called k-local 3-SAT, which involves a 3-SAT instance with m clauses and the guarantee that xi, xj appear in the same clause only if |i - j| < k."
+            },
+            {
+                "problem_order": 2,
+                "description": "Describe a dynamic programming algorithm for k-local 3-SAT that is efficient when k is small."
+            },
+            {
+                "problem_order": 3,
+                "description": "Analyze the runtime of the dynamic programming algorithm for k-local 3-SAT."
+            },
+            {
+                "problem_order": 4,
+                "description": "Explain how to determine if the k-local 3-SAT formula is satisfiable given the solutions to all the subproblems."
+            },
+            {
+                "problem_order": 5,
+                "description": "Provide a polynomial-time reduction from 3-SAT to k-local 3-SAT."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall2020_10",
+        "topic": "Algorithms",
+        "question_description": "You want to drive from San Francisco to New York City on I-80. Your car holds C gallons of gas, but is a gas guzzler and gets 1 mile per gallon. There are n gas stations along I-80, with gas station i at distance di miles from San Francisco (in sorted order), with cost per gallon ci. You start with a full tank at station 1 in San Francisco, and your goal is to reach gas station n in NYC, while spending as little as possible on gas. You may assume there is some feasible trip, i.e., that max{di - di-1} < C.",
+        "answer": "",
+        "hint": "",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Explain the problem of driving from San Francisco to New York City on I-80, where the car holds C gallons of gas and there are n gas stations along the route."
+            },
+            {
+                "problem_order": 2,
+                "description": "Prove that if the ith gas station has the cheapest price among stations 2,...,n-1, then either the ith gas station is the first one to buy gas at or you arrive at the ith gas station with an empty tank."
+            },
+            {
+                "problem_order": 3,
+                "description": "Prove that if the ith gas station has the cheapest price among stations 2,...,n-1, then either the ith gas station is the last one to buy gas at or you leave the ith gas station with a full tank."
+            },
+            {
+                "problem_order": 4,
+                "description": "Describe an O(n^2)-time divide-and-conquer algorithm to compute the minimum amount of money you can spend on gas for the trip from San Francisco to New York City."
+            }
+        ]
+    }
+]

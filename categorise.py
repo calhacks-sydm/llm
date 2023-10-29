@@ -19,7 +19,6 @@ from pypdf import PdfReader
 #simply categorizing- only belongs to 1 topic
 #not influenced by headers and footers but ideal for question retrieval\
 
-#TODO web scrape for content topics
 topicList = []
 filename = "topics.txt"
 with open(filename, 'r') as file:
@@ -50,18 +49,18 @@ message_content = "You are a useful assistant that categorises questions into on
 messages.append({"role": "system", "content": message_content})
 
 #TODO parse questions individually
-reader = PdfReader("2023 Spring Midterm 1.pdf") 
-number_of_pages = len(reader.pages)
-page = reader.pages[14]
-question = page.extract_text()
+# reader = PdfReader("2023 Spring Midterm 1.pdf") 
+# number_of_pages = len(reader.pages)
+# page = reader.pages[14]
+# question = page.extract_text()
 
-output=[]
-messages.append({"role": "user", "content": question}) 
-chatResponse = openai.ChatCompletion.create(
-    model='gpt-3.5-turbo',
-    messages=messages,
-    functions= functions,
-    function_call={"name": "categorizeQuestion"}
-)
-topic= json.loads(chatResponse["choices"][0]["message"]["function_call"]["arguments"]).get("topic")
-print(topic)
+def runCategorisellm(question):
+    messages.append({"role": "user", "content": question}) 
+    chatResponse = openai.ChatCompletion.create(
+        model='gpt-3.5-turbo',
+        messages=messages,
+        functions= functions,
+        function_call={"name": "categorizeQuestion"}
+    )
+    topic= json.loads(chatResponse["choices"][0]["message"]["function_call"]["arguments"]).get("topic")
+    return(topic)

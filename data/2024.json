@@ -1,0 +1,26 @@
+[
+    {
+        "question_id": "Spring_2020_1",
+        "topic": "Linear Programming",
+        "question_description": "Consider the following linear program:\n\nmax c^T x\n\nsubject to Ax < b\n\nwhere A is an m x n matrix of real numbers, x is an n-dimensional vector, and b and c are n-dimensional vectors. Write down the dual of this linear program.",
+        "answer": "The dual of the linear program is:\n\nmin b^T y\n\nsubject to A^T y > c\n\nwhere y is an m-dimensional vector.",
+        "hint": "To derive the dual, you need to swap the roles of the variables and constraints, and change the objective function from maximization to minimization (or vice versa).",
+        "subproblem": []
+    },
+    {
+        "question_id": "Spring_2020_2",
+        "topic": "Duality",
+        "question_description": "Fill in the blank to complete the proof for weak duality and briefly justify.\n\nPrimal: max c^T x\n\nsubject to Ax < b\n\nDual: min b^T y\n\nsubject to A^T y > c\n\nProof: c^T x <= y^T (Ax) <= y^T b",
+        "answer": "c^T x <= y^T (Ax) <= y^T b",
+        "hint": "Use the properties of matrix multiplication and the constraints of the primal and dual problems to derive the inequality.",
+        "subproblem": []
+    },
+    {
+        "question_id": "Spring_2020_3",
+        "topic": "Linear Programming",
+        "question_description": "Consider a linear program with the following constraints:\n\nmax c^T x\n\nsubject to Ax <= b\n\nwhere A is an m x n matrix, x is an n-dimensional vector, and b and c are n-dimensional vectors. Write down the dual of this linear program.",
+        "answer": "The dual of the linear program is:\n\nmin b^T y\n\nsubject to A^T y >= c\n\nwhere y is an m-dimensional vector.",
+        "hint": "To derive the dual, you need to swap the roles of the variables and constraints, and change the direction of the inequalities.",
+        "subproblem": []
+    }
+]

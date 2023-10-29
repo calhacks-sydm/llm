@@ -1,0 +1,233 @@
+[
+    {
+        "question_id": "Fall_2022_1",
+        "topic": "Search tree",
+        "question_description": "Suppose we run depth-first search on the following graph, breaking ties alphabetically. Draw the DFS search tree.",
+        "answer": "The DFS search tree is as follows: ...",
+        "hint": "Start the DFS anywhere that has the smallest pre.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Draw the DFS search tree."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2022_2",
+        "topic": "Runtime Analysis",
+        "question_description": "Consider the following snippet of code. Function what(n) { if (n < 1) return; for(i=1; i<=n; i++) { for j=1; j<=n/2; j++) { for k=1; k<=n/4; k++) { print BLAH; } } what(n/2); what(n/2); what(n/2); what(n/2); } Let F(1) denote the number of 'BLAH's printed by a call to what(n). Write a recurrence relation for F(n).",
+        "answer": "F(n) = 4F(n/2) + O(n^2)",
+        "hint": "Use the recurrence relation F(n) = 4F(n/2) + O(n^2)",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Write a recurrence relation for F(n)."
+            },
+            {
+                "problem_order": 2,
+                "description": "Write the tightest upper bound for F(1)."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2022_3",
+        "topic": "Dijkstra's algorithm",
+        "question_description": "Recall that Dijkstra's algorithm for shortest paths maintains a priority queue. Let H denote the priority queue that is maintained by Dijkstra's algorithm starting at vertex S in the graph shown below. List all the decreaseKey(H, _) operations performed during the execution of Dijkstra on the following graph starting at node S.",
+        "answer": "The decreaseKey(H, _) operations performed are: ...",
+        "hint": "List all the decreaseKey(H, _) operations performed during the execution of Dijkstra on the graph starting at node S.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "List all the decreaseKey(H, _) operations performed during the execution of Dijkstra on the graph starting at node S."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2022_4",
+        "topic": "Strongly Connected Components",
+        "question_description": "Suppose we execute DFS on a directed graph G and compute pre and post values for each node. Let u be the vertex with the smallest pre value and v be the vertex with the largest post value. Answer the following questions.",
+        "answer": "1. The vertex with the smallest pre value is: C. necessarily part of a source SCC.\n2. The vertex with the largest post value is: A. necessarily part of a source SCC.\n3. If the graph G is strongly connected then: C. vertex u is the same as vertex v.\n4. The vertex with the largest pre value is: C. none of the above.",
+        "hint": "Answer the questions based on the properties of strongly connected components.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Answer the following questions based on the properties of strongly connected components."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2022_5",
+        "topic": "Minimum Spanning Tree",
+        "question_description": "The tree shown below is a minimum spanning tree in a graph H. The remaining edges of the graph H are NOT shown in the picture. Answer the following questions.",
+        "answer": "1. The smallest possible value for the weight of edge AG is: 8.\n2. The cost of the minimum spanning tree in the new graph is: 25.\n3. In this class, we studied two algorithms for MST: Kruskal's and Prim's algorithm. We executed one of these two algorithms (Kruskal's/Prim's) on the graph H and it produced the tree shown above. The next edge added by the algorithm is: CD.\n4. In this class, we studied two algorithms for MST: Kruskal's and Prim's algorithm. We executed one of these two algorithms (Kruskal's/Prim's) on the graph H and it produced the tree shown above. The next edge added by the algorithm is: CD.",
+        "hint": "Answer the questions based on the given information about the minimum spanning tree.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Answer the following questions based on the given information about the minimum spanning tree."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2022_6",
+        "topic": "TSP tour",
+        "question_description": "Suppose there are n vertices with distances d_ij between vertices i and j. Assume that the distances d_ij satisfy the triangle inequality. Answer the following question.",
+        "answer": "If the cost of the minimum traveling salesman tour is C, then the cost of the minimum spanning tree is at most 2W.",
+        "hint": "Answer the question based on the relationship between the minimum traveling salesman tour and the minimum spanning tree.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Answer the following question based on the relationship between the minimum traveling salesman tour and the minimum spanning tree."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2022_7",
+        "topic": "NP-completeness true/false",
+        "question_description": "For each of the following questions, circle one of the options: True (T), False (F), True if and only if P = NP (OP=NP), True if and only if P ≠ NP (OP-#NP).",
+        "answer": "1. There is a polynomial-time reduction from Independent Set to Hitting Set: T\n2. There is a polynomial-time reduction from Integer Programming to Circuit-SAT: T\n3. There is a polynomial-time reduction from Minimum Spanning Tree to Integer Programming: F\n4. If there is a polynomial time algorithm for one problem in NP, then P = NP: F\n5. The Longest Increasing Subsequence problem is NP-complete: T",
+        "hint": "Circle one of the options for each question based on the given information about NP-completeness.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Circle one of the options for each question based on the given information about NP-completeness."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2022_8",
+        "topic": "Edit Distance",
+        "question_description": "Given two strings x[1,...,n] and y[1,...,m], recall that the edit distance is the smallest number of keystrokes needed to edit the string x into string y. Here each insertion and deletion of a character takes one key stroke. We devised a dynamic programming algorithm for the problem wherein the subproblems are ED{i,j] = minimum number of keystrokes needed to edit the prefix x[1,...,i] into the prefix y[1,..., j]. Suppose we had a special key-board in which each insertion takes 2 keystrokes, each deletion takes 3 keystrokes, and each substitution takes 4 keystrokes.",
+        "answer": "1. The modified recurrence relation for ED{i,j] is: ED{i-1,j) + 3, ED{i,j] = min(4 ED{i,j-1) + 2, ED{i-1,j-1) + 4 - [x{i] = yj].\n2. The modified base cases for ED{i, j] are: ED{i,0] = 3i, ED[0, j] = 2j.",
+        "hint": "Answer the questions based on the given information about the edit distance algorithm.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Answer the following questions based on the given information about the edit distance algorithm."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2022_9",
+        "topic": "Fill in the Blanks",
+        "question_description": "Fill in the blanks with the most plausible form based on the given information.",
+        "answer": "1. A directed acyclic graph (DAG) on n vertices can have at most 2^(n(n-1)/2) number of edges.\n2. A strongly connected directed graph on n vertices must have at least n edges.\n3. Let G be a graph on n nodes. The dynamic programming based algorithm for All-Pairs-Shortest-Paths (also known as the Floyd-Warshall algorithm) on G has many subproblems. Moreover, the recurrence relation expresses the value of each subproblem in terms of many other subproblems.\n4. Suppose a hash function h : {1,...,n} -> {1,...,2n} is drawn from a universal hash family. Then Pr{h(2) = h(1)] = 5/n and Pr{h(2) = h(1)] = 1/n.\n5. If w is a primitive 16th root of unity then w^2 is a 32nd root of unity.\n6. Suppose we execute the reservoir sampling algorithm on a stream of elements. The probability that the reservoir contains s at the end of the 10th iteration is 1/2^10.\n7. For each of the following quantum states, the probabilities of observing 0 and 1 when we perform a measurement on them are: |0) - Pr[ outcome is 0] = 1, |1) - Pr[ outcome is 1] = 0, |+3) - Pr[ outcome is 0] = 1/3, Pr[ outcome is 1] = 2/3.\n8. The quantum operation Rotate(-pi/4, |0)) = sqrt(3)/2|0) - 1/2|1).\n9. Suppose we have an undirected connected graph, and we would like to find a strongly connected orientation of its edges. A good pivot is a number b such that between 25% to 75% of the numbers in the array are less than b.\n10. Given an array of numbers a1,...,an (NOT sorted), a good pivot is a number b such that between 25% to 75% of the numbers in the array are less than b.\n11. Design an efficient algorithm for the following problem: A spanning tree T that minimizes the medianCost(T), where medianCost(T) is defined as the median of the weights of the edges in the tree T.\n12. Given an array of numbers a1,...,an (NOT sorted), a good pivot is a number b such that between 25% to 75% of the numbers in the array are less than b."
+    },
+    {
+        "question_id": "Fall_2022_10",
+        "topic": "Reductions",
+        "question_description": "Among the following problems, one of them reduces to the other but not vice-versa. Fill in the blanks below.",
+        "answer": "1. The problem Independent Set is believed to not reduce in polynomial time to the problem Hitting Set because Independent Set is a NP-Complete problem while Hitting Set is a problem that is easier than NP-Complete.\n2. On the other hand, the problem Matching reduces in polynomial time to the problem Independent Set. Here is the reduction: Given an instance of the problem Matching, we will construct an instance of the problem Independent Set as follows...",
+        "hint": "Fill in the blanks based on the relationship between the two problems and the given information.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Fill in the blanks based on the relationship between the two problems and the given information."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2022_11",
+        "topic": "One-Way Streets",
+        "question_description": "Given an undirected connected graph, we would like to find a strongly connected orientation of its edges. Answer the following questions.",
+        "answer": "1. An example of a connected undirected graph where this cannot be done is: The easiest graph has two vertices 1 and 2 and an edge (1,2) between them.\n2. Call an edge lonely if it is NOT part of any cycle. If an undirected graph G has a strongly connected orientation, then it can have at most 0 lonely edges.",
+        "hint": "Answer the questions based on the given information about strongly connected orientations.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Answer the following questions based on the given information about strongly connected orientations."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2022_12",
+        "topic": "Karger's algorithm",
+        "question_description": "Consider the following undirected graph G = (V,E) on n vertices. Answer the following questions.",
+        "answer": "1. The minimum cut in this graph consists of the sets S = {1,...,n-1} and S = {n}. The size of the minimum cut is 1.\n2. The probability that Karger's algorithm outputs the minimum cut is 1/n.",
+        "hint": "Answer the questions based on the given information about Karger's algorithm and the minimum cut.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Answer the following questions based on the given information about Karger's algorithm and the minimum cut."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2022_13",
+        "topic": "Longest k-modal subsequence",
+        "question_description": "A sequence of integers a1,...,an is k-modal if it starts off increasing and switches between increasing and decreasing at most k times. Answer the following question.",
+        "answer": "If there exists a longest k-modal subsequence of length L, then there exists a longest (k-1)-modal subsequence of length L.",
+        "hint": "Answer the question based on the properties of k-modal subsequences.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Answer the following question based on the properties of k-modal subsequences."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2022_14",
+        "topic": "Reductions",
+        "question_description": "Show that the following problems are NP-complete by providing a polynomial-time reduction.",
+        "answer": "1. Hitting Set reduces to Vertex Cover.\n2. Independent Set reduces to Rudrata (Hamiltonian) Path.\n3. Rudrata (Hamiltonian) Cycle reduces to Independent Set.\n4. Vertex Cover reduces to Rudrata (Hamiltonian) Cycle.\n5. 3-SAT reduces to Rudrata (Hamiltonian) Path.\n6. Integer Programming reduces to 3-SAT.",
+        "hint": "Fill in the blanks based on the given information about NP-completeness reductions.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Fill in the blanks based on the given information about NP-completeness reductions."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2022_15",
+        "topic": "Good Pivot",
+        "question_description": "Given an array of numbers a1,...,an (NOT sorted), a good pivot is a number b such that between 25% to 75% of the numbers in the array are less than b. Devise a randomized algorithm that will output a number b such that b is a good pivot with probability at least 1 - 10^-6. With probability 10^-6, the algorithm may output a number that is not a good pivot.",
+        "answer": "The algorithm works as follows: ...",
+        "hint": "Devise a randomized algorithm that will output a number b such that b is a good pivot with probability at least 1 - 10^-6.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Devise a randomized algorithm that will output a number b such that b is a good pivot with probability at least 1 - 10^-6."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2022_16",
+        "topic": "Minimum Median Tree",
+        "question_description": "Design an efficient algorithm for finding a spanning tree T that minimizes the medianCost(T), where medianCost(T) is defined as the median of the weights of the edges in the tree T.",
+        "answer": "The algorithm works as follows: ...",
+        "hint": "Design an efficient algorithm for finding a spanning tree T that minimizes the medianCost(T).",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Design an efficient algorithm for finding a spanning tree T that minimizes the medianCost(T)."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2022_17",
+        "topic": "Minimum Median Tree",
+        "question_description": "Design an efficient algorithm for finding a spanning tree T that minimizes the medianCost(T), where medianCost(T) is defined as the median of the weights of the edges in the tree T.",
+        "answer": "The algorithm works as follows: ...",
+        "hint": "Design an efficient algorithm for finding a spanning tree T that minimizes the medianCost(T).",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Design an efficient algorithm for finding a spanning tree T that minimizes the medianCost(T)."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2022_18",
+        "topic": "Minimum Median Tree",
+        "question_description": "Design an efficient algorithm for finding a spanning tree T that minimizes the medianCost(T), where medianCost(T) is defined as the median of the weights of the edges in the tree T.",
+        "answer": "The algorithm works as follows: ...",
+        "hint": "Design an efficient algorithm for finding a spanning tree T that minimizes the medianCost(T).",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Design an efficient algorithm for finding a spanning tree T that minimizes the medianCost(T)."
+            }
+        ]
+    }
+]

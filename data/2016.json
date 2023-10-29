@@ -1,0 +1,237 @@
+[
+    {
+        "question_id": "Fall_2015_1",
+        "topic": "DFS",
+        "question_description": "For the directed graph below, draw the DAG of the strongly connected components.\n\nThe strongly connected components are {A, J, BCDEFGH}",
+        "answer": "The DAG of the strongly connected components is as follows:\n\nA -> BCDEFGH\nJ",
+        "hint": "Use depth-first search (DFS) to find the strongly connected components.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Identify the vertices in the graph."
+            },
+            {
+                "problem_order": 2,
+                "description": "Perform depth-first search (DFS) on the graph."
+            },
+            {
+                "problem_order": 3,
+                "description": "Identify the strongly connected components."
+            },
+            {
+                "problem_order": 4,
+                "description": "Draw the DAG of the strongly connected components."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2015_2",
+        "topic": "Linear programming",
+        "question_description": "Your linear program is this:\n\nmax 21+ 72\na<il\nw<l\n\n1,22 20\n\n(a) Draw the feasible region. What is the optimal solution? How many steps will Simplex take from (0,0)?\nWhat are the multipliers that prove optimality?\n(Feasible region, not drawn here, is the square whose vertices are (0,0), (1,0), (0,1), and (1, 1).) The optimal\n\nsolution is at 21 = 1,22 = 1 with value 2. Simplex will take two steps to reach this optimal solution. The\nmultipliers that prove optimality are y; = 1, y2 = 1.",
+        "answer": "The feasible region is a square with vertices at (0,0), (1,0), (0,1), and (1,1). The optimal solution is at (x1=1, x2=1) with a value of 2. Simplex will take two steps to reach this optimal solution. The multipliers that prove optimality are y1=1 and y2=1.",
+        "hint": "Use the simplex algorithm to solve the linear program.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Identify the constraints and objective function of the linear program."
+            },
+            {
+                "problem_order": 2,
+                "description": "Draw the feasible region."
+            },
+            {
+                "problem_order": 3,
+                "description": "Apply the simplex algorithm to find the optimal solution."
+            },
+            {
+                "problem_order": 4,
+                "description": "Determine the number of steps Simplex will take from (0,0) to reach the optimal solution."
+            },
+            {
+                "problem_order": 5,
+                "description": "Find the multipliers that prove optimality."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2015_3",
+        "topic": "Max Flow",
+        "question_description": "Professor Reynard—Ulysses Nutts is teaching a class with 100 students and five sections Al, A2, ..., A5, with\n20 students each, and you are his TA. Now, the professor believes that it is important for students to mingle\nin a class. For this reason, after the midterm, he wants to redistribute the students in five new sections, B1,\nB2, ... , B5, so that each of the new sections contains no more than 4 students from each of the old sections.\n\n(a) You create a max-flow problem that accomplishes this. The nodes of the network are shown below.\nIndicate in the sketch the edges with the appropriate capacities (no need to draw all 35 edges). Then\ndescribe the max-flow showing that the professor’s scheme is doable.\n\n©\n© © © ©\n© © © ©\n©\n\n@\n®\n\nAdd edges (s, A1) with capacity 20.\nAdd edges (Ai, Bj) with capacity 4.\nAdd edge (Bj, t) with capacity 20.\n\nThe max flow solution completely saturates every edge.",
+        "answer": "The max flow solution completely saturates every edge. The professor's scheme is doable.",
+        "hint": "Create a network with nodes representing the sections and edges representing the number of students to be transferred.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Identify the nodes and edges in the network."
+            },
+            {
+                "problem_order": 2,
+                "description": "Assign capacities to the edges based on the number of students to be transferred."
+            },
+            {
+                "problem_order": 3,
+                "description": "Apply the max-flow algorithm to find the maximum flow in the network."
+            },
+            {
+                "problem_order": 4,
+                "description": "Show that the max flow solution completely saturates every edge."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2015_4",
+        "topic": "Bottleneck Dijkstra",
+        "question_description": "In the bottleneck path problem you are given an undirected graph (V, E) with |V| =n nodes, |E| = m edges\n(as always we are assuming that n < m), and distances (i,j) on the edges, and two nodes s and t, and\nyou are asked to find the bottleneck B, that is, the smallest number such that there is a path from s to t on\nwhich all edges have length B or less. You do not need to find the actual path. For example, in the graph\nshown, the best bottleneck is 2, because of the path S —C —T.\n\n(a) You can solve this problem by a simple modification of Dijkstra. Show how would you change the\nstatement\n\n...if dist(v) > dist(u) + (u,v) then dist(v) = dist(u) + (u,v)...\n\nin Dijkstra’s algorithm to accomplish this. Argue very briefly that it works.\n\nModify the statement to if dist(v) > max(dist(u), (u,v)) then dist(v) = max(dist(u), (u,v)). The proof\nworks very similarly to Dijkstra’s proof. We can use induction. Assume that the first i vertices removed from\nthe queue have the correct bottleneck values. For the i+ 1th vertex say u which was the minimum in the\nqueue, if there was a shorter bottleneck path s + u, consider the last vertex v on the path athat is among\nthe first i vertices. Let w be the next vertex. Then w must be the minimum in the queue, a contradiction\nunless w = v.",
+        "answer": "Modify the statement to if dist(v) > max(dist(u), (u,v)) then dist(v) = max(dist(u), (u,v)). The proof works very similarly to Dijkstra’s proof. We can use induction. Assume that the first i vertices removed from the queue have the correct bottleneck values. For the i+ 1th vertex say u which was the minimum in the queue, if there was a shorter bottleneck path s + u, consider the last vertex v on the path athat is among the first i vertices. Let w be the next vertex. Then w must be the minimum in the queue, a contradiction unless w = v.",
+        "hint": "Modify the comparison in Dijkstra's algorithm to consider the maximum of the current distance and the edge length.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Identify the problem statement and the modification needed in Dijkstra's algorithm."
+            },
+            {
+                "problem_order": 2,
+                "description": "Explain how the modified statement ensures finding the bottleneck path."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2015_5",
+        "topic": "Complete the sentences",
+        "question_description": "Complete the sentences: (20 points)\n\n(a) The solution of the recurrence T(n) = 4T(#) + n? is...\n\nBy master theorem, the solution to this is T(n) = O(n? log n)\n\n(b) You can linearize a dag by doing depth-first search and then ordering the nodes by...\n\npost order, from largest to smallest.\n\n(c) Dijkstra’s algorithm works when the edge lengths are ...\n\nnon-negative. (A common answer that only got half credit was “positive”, but edges lengths can be 0.)\n\n(d) An operation of the union-find data structure with path compression on n elements can never take longer\nhan...\n\nO(log n) time. (Note that the possible runtime of a single operation is not the same as its amortized runtime.)\n\n(e) A graph (direct or undirected) has a cycle if and only if depth-first search finds a...\n\nback edge. (This is not the same as “an edge already visited”, since this latter category includes cross edges,\nwhich are not necessarily part of a cycle).\n\n(f) In a Huffman tree with all frequencies different, the item with the second-lowest frequency will always\ne placed at...\n\nlowest level (leaf is not accepted, since every item will be at a leaf).\n\n(g) The greedy algorithm for SET COVER approximates the optimum by a factor of...\n\nO(log n), where n is the number of objects to be covered. (Some students incorrectly made reference to k,\nthe optimal number of sets).\n\n(h) The FFT on n points can be run with n processors in parallel time...\n\nO(log n)\n\n(i) The FFT on n points can be run with \\/n processors in parallel time...\n\nO(n * log(n))\n\n(j) In Multiplicative Weights with n experts and T periods you can come O(... ) close to the optimum total\nperformance.\n\nInn\nam\n\n11",
+        "answer": "The answers to the sentences are as follows:\n(a) T(n) = O(n^2 log n)\n(b) post order, from largest to smallest\n(c) non-negative (edges lengths can be 0)\n(d) O(log n) time\n(e) back edge\n(f) lowest level\n(g) O(log n)\n(h) O(log n)\n(i) O(n log n)\n(j) O(log T)",
+        "hint": "Fill in the blanks with the correct answers to complete the sentences.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Fill in the blank for sentence (a)."
+            },
+            {
+                "problem_order": 2,
+                "description": "Fill in the blank for sentence (b)."
+            },
+            {
+                "problem_order": 3,
+                "description": "Fill in the blank for sentence (c)."
+            },
+            {
+                "problem_order": 4,
+                "description": "Fill in the blank for sentence (d)."
+            },
+            {
+                "problem_order": 5,
+                "description": "Fill in the blank for sentence (e)."
+            },
+            {
+                "problem_order": 6,
+                "description": "Fill in the blank for sentence (f)."
+            },
+            {
+                "problem_order": 7,
+                "description": "Fill in the blank for sentence (g)."
+            },
+            {
+                "problem_order": 8,
+                "description": "Fill in the blank for sentence (h)."
+            },
+            {
+                "problem_order": 9,
+                "description": "Fill in the blank for sentence (i)."
+            },
+            {
+                "problem_order": 10,
+                "description": "Fill in the blank for sentence (j)."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2015_6",
+        "topic": "True or false",
+        "question_description": "True or false? Circle the right answer. No explanation needed (45 points)\n\n(No points will be subtracted for wrong answers, so guess all you want!)\n\nF\n\nFalse\n\nFalse The a\n\nHuffman’s al\n\nFalse Eucli\n\nTrue If we\n\nFalse We need to use a hea\n\nhe reduction we did in class is fr\n\nThe Bellman-Ford algorithm for s\nFalse This runs in O(|V||E]|) time.\n\nhe dynamic programming algori\n\nalgorithm wil\n\nhortes\n\nFalse Knapsack still runs in exponential\n\ngorithm that is best\n\nvalue of tha’\n\ngorithm runs in linear time.\n\nhe Floyd-Warshall algorithm for all-pairs shortest paths works even when there are negative cycles.\n\nFalse The Floyd-Warshal\n\n1 still fail.\n\nom MAx FLow to MATCHING, not the other way.\n\npaths runs in O(|V|?) time.\n\nhm for KNAPSACK WITHOUT REPETITION runs in polynomial time.\n\ntime with respect to the input.\n\nThe algorithm for MST that is best to parallelize is Kruskal’s.\n\no parallelize is Bovruka’s.\n\np to implement this efficiently, which makes the runtime O(n logn).\n\nEuclid’s algorithm on n-bit numbers can run faster than O(n) time.\n\n’s algortihm runs in O(n*) time (there are n iterations, each of which requires an O(n?)\nime division).\nDoubling the capacities in MAx FLOW just doubles the values of the maximum flow\n\nook at the value of any cut, we can see that doubling the capacities will just double the\ncut. Since all cuts will be doubled, and since the min cut equals the max flow, the max\nflow will also be doubled.\n\nAdding 1 to the capacities in MAX FLOw just adds 1 to the values of the max flow.\n\nFalse Consider the following counterexample with 3 nodes A, B,C, with edges A > B, B > C,A>C,\nall with capacity 1, and we want the max flow from A to C. Then, the max flow is originally 2, but\nadding 1 to all capacities will make the max flow 4.\n\nIn the remaining questions there are four possible answers: (1) True : (2) False (F);\n\n(3) True if and only if P = NP (=); (3) True if and only if P # NP\n\n). Circle one.\n\nNote: By “reduction” in this exam it is always meant “polynomial-time reduction.”\n\nThe minmax strategy in a zero-sum game can be found in polynomial time.\n\nTrue We know that finding the minmax strategy is in P.\n\nThere is no reduction from RUDRATA PATH to MAX FLow.\n\n# Any NP-complete problem can always be reduced to any other NP-complete problem, although\nthe reduction may not be clear or direct.\n\nThere is a polynomial-time algorithm for INDEPENDENT SET.\n\n= Only if NP-complete problems are all within P.\n\nThere is a known polynomial-time algorithm for INDEPENDENT SET.\n\nFalse In other words, we do not know that P = NP.\n\nThere is a reduction from FACTORING to RUDRATA PATH.\n\nTrue Since Factoring is a problem in NP, and Rudrata Path is NP-complete, then there exists a\nreduction from Factoring to Rudrata path.\n\nINTEGER LINEAR PROGRAMMING is NP-complete.\n\nTrue This is true regradless of whether or not P = NP.\n\nLINEAR PROGRAMMING is NP-complete.\n\n= We know that Linear program is in P (and therefore NP). However, we do not know if it is NP-hard.\nThere can be a reduction from an NP-complete problem to Linear Programming if and only if P =\n\nNP.\n\n[here are problems in NP that cannot be solved in exponential time.\nFalse As shown in homework, all problems in NP can be solved in exponential time.\n\nhere are computational problems that cannot be solved in exponential time.\nTrue One example is the halting problem, which can not be solved in a finite amount of time.\n\nhere are problems in NP that are neither in P nor NP-complete.\n\n# If P # NP, then we can prove that there must be problems in between the two, e.g. we believe\nfactoring to be in this category. Otherwise, then every problem in NP is both P and NP-complete.\n\nThere is a problem in NP that is not NP-complete.\n# Only if NP 4 NP-complete.\nAny two problems in P can be reduced to each other in polynomial time.\n\nTrue The reduction from problem A to problem B works as follows. First, solve A. If there is a\nsolution, create an instance of B that has a solution. Otherwise, create an instance of B that does not\nhave a solution.\n\nAny two problems in NP can be reduced to each other in polynomial time.\n\n= Any problem in NP can be reduced to any problem in NP-complete in polynomial time, so this is\nonly true if NP = NP-complete.\nThere is a polynomial-time algorithm that approximates the TSP with triangle inequality with a factor\nof two.\nTrue This was covered in the textbook.\n\nThere is a polynomial-time algorithm that approximates the TSP without triangle inequality with a\nfactor of two.\n\n= A polynomial time algorithm that optimally solves TSP will also approximate TSP with a factor of\ntwo. But the textbook mentions that if P 4 NP, then there cannot be an approximation algorithm\nfor TSP.\n\nThere is a reduction from INDEPENDENT SET to 4-INDEPENDENT SET.\n\nTrue Since Independent Set is a problem in NP, and 4-Independent Set is NP-complete, then there exists\na reduction from Independent Set to 4-Independent Set.\n\nThe 3-INDEPENDENT SET problem is NP-complete.\n\nTrue Since 4-Independent Set is NP-complete, and 3-Independent Set is a special case of 4-Independent Set,\nthen 3-Independent Set is also NP-complete.",
+        "hint": "Circle the correct answer for each statement.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Circle the correct answer for statement (a)."
+            },
+            {
+                "problem_order": 2,
+                "description": "Circle the correct answer for statement (b)."
+            },
+            {
+                "problem_order": 3,
+                "description": "Circle the correct answer for statement (c)."
+            },
+            {
+                "problem_order": 4,
+                "description": "Circle the correct answer for statement (d)."
+            },
+            {
+                "problem_order": 5,
+                "description": "Circle the correct answer for statement (e)."
+            },
+            {
+                "problem_order": 6,
+                "description": "Circle the correct answer for statement (f)."
+            },
+            {
+                "problem_order": 7,
+                "description": "Circle the correct answer for statement (g)."
+            },
+            {
+                "problem_order": 8,
+                "description": "Circle the correct answer for statement (h)."
+            },
+            {
+                "problem_order": 9,
+                "description": "Circle the correct answer for statement (i)."
+            },
+            {
+                "problem_order": 10,
+                "description": "Circle the correct answer for statement (j)."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2015_7",
+        "topic": "Dynamic Programming Plus",
+        "question_description": "(a) You are hired by a startup named Kale Tacos to plan its deployment of food trucks at street corners of\nShattuck Ave. There are n street corners where a truck could be deployed, numbered 1 through n. You have\nresearched carefully the revenue a truck will get from street corner 7, but this amount depends on whether\nor not another truck is deployed at one of the adjacent corners i — 1 or i + 1 (street corners 1 and n have\nonly one adjacent street corner). That is, your data consists of n number pairs (hj, /xc2/xa2;),i = 1,...,n where\nh; (which is non-negative) is the revenue when there is no truck in any one of the adjacent corners, and /xc2/xa2;\n(which is smaller than h; and may be negative) is the revenue when there is another a truck in one of the\nadjacent corners, or if there are trucks in both. You want to find the optimum placement of trucks (there is\nno limit to the number of trucks you can deploy).\n\nYou use, of course, Dynamic Programming! You define R(i),i = 1,...,n — 1 to be the revenue you can\nget from corners 1,2,...,i assuming that there is no truck at corner i+ 1, and R’(i),i =1,...,n to be the\nrevenue you can get from corners 1,2,...,i assuming that there is a truck corner i + 1.\n\nFill the blanks:\n\nR(1) = h1\n\nR'(1) = max(0, l1)\n\nFor i = 2,3,...,n-1 R(i) = max(R(i— 1), R’(i—1) +h), R’(i) = max(R(i— 1), R’(i—1) +h)\n\nThe optimum revenue is computed as R(n). (Note that the above subproblem\nwas only defined up to R(n — 1); both a correct expression for R(n) or just\nwriting ' R(n)' was accepted.)\n\nThe running time is O(n), because there are O(n) subproblems and it takes\nO(1) time for each.",
+        "answer": "The optimum revenue is computed as R(n). The running time is O(n).",
+        "hint": "Use dynamic programming to find the optimum revenue.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Define the subproblems for the dynamic programming solution."
+            },
+            {
+                "problem_order": 2,
+                "description": "Write the recurrence relation for R(i) and R'(i)."
+            },
+            {
+                "problem_order": 3,
+                "description": "Compute the optimum revenue using the recurrence relation."
+            },
+            {
+                "problem_order": 4,
+                "description": "Determine the running time of the dynamic programming solution."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2015_8",
+        "topic": "NP-completeness",
+        "question_description": "Note: By “reduction” in this exam it is always meant “polynomial-time reduction.” For the reductions in\nProblem 8 mention the problem you are using, direction and construction of the reduction (proofs are not\nnecessary). Also, when you are asked to show that a problem is NP-complete, no need to show that it is in\nNP, unless asked to do so.\n\n(a) Recall the 3-DIMENSIONAL MATCHING problem, asking you to match n girls, n boys, and n pets given\na list of compatible triples. We know that it is NP-complete. In the 4-DIMENSIONAL MATCHING problem\nyou are given compatible quadruples of n boys, n girls, n pets, and n homes, and again you want to create n\nharmonious households accommodating them all. Fill the blanks in the following proof that 4-DIMENSIONAL\nMATCHING is NP-complete.\n\nProof: We will reduce the problem 8D matching to the problem 4D matching\n\nGiven an instance of the problem 8D matching we construct an instance of the problem 4D matching\n\nas follows: Create n homes, which are compatible with every triple in our 3D Matching instance.\n\nA common error was to add a home to each triple that was compatible with that triple.",
+        "answer": "Proof: We will reduce the problem 3D matching to the problem 4D matching.\n\nGiven an instance of the problem 3D matching, we construct an instance of the problem 4D matching as follows: Create n homes, which are compatible with every triple in our 3D matching instance.",
+        "hint": "Create a reduction from 3D matching to 4D matching.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Identify the problem you are reducing from and the problem you are reducing to."
+            },
+            {
+                "problem_order": 2,
+                "description": "Explain the construction of the reduction from 3D matching to 4D matching."
+            }
+        ]
+    }
+]

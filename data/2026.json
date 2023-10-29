@@ -1,0 +1,205 @@
+[
+    {
+        "question_id": "Spring_2021_1",
+        "topic": "Algorithms",
+        "question_description": "For the following parts, state clearly whether the given statement is true or false and give a brief justification for your answer.\n\n(a) In a zero-sum game, it's possible for Player 2 to give Player 1 an advantage by announcing her strategy prior to the game.",
+        "answer": "True. For example, in rock, paper, scissors, P2 announcing she'll always play rock gives P1 an advantage.\n\nIn a zero-sum game, it's possible for Player 2 to give Player 1 an advantage by announcing an optimal Player 2 strategy prior to the game.",
+        "hint": "Consider the concept of zero-sum games and how players can strategically announce their strategies.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Explain the concept of a zero-sum game and how it relates to the given statement."
+            },
+            {
+                "problem_order": 2,
+                "description": "Provide an example of a zero-sum game where Player 2 can give Player 1 an advantage by announcing her strategy."
+            }
+        ]
+    },
+    {
+        "question_id": "Spring_2021_2",
+        "topic": "Algorithms",
+        "question_description": "Suppose the SCC algorithm on some graph returns the SCCs in the order: {G, H, I, J, K, L}, {D}, {C, F}, {B, E}, {A}. Then, it is guaranteed that in the first DFS (the one done on GR), Postorder(H) > Postorder(D).",
+        "answer": "False. Not necessarily. For example, imagine a graph where the first SCC contains edges between G and H, and have H connect to nothing else. In the DFS, let G go to H, which then finishes, certainly before D.",
+        "hint": "Consider the order of SCCs returned by the algorithm and how it relates to the postorder traversal of the graph.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Explain the concept of SCCs and how they are determined by the algorithm."
+            },
+            {
+                "problem_order": 2,
+                "description": "Provide a counterexample to the given statement by constructing a graph where Postorder(H) is not greater than Postorder(D)."
+            }
+        ]
+    },
+    {
+        "question_id": "Spring_2021_3",
+        "topic": "Algorithms",
+        "question_description": "There exists an algorithm using O(log n) space to compute the mean of a stream of n integers, each in (0, n].",
+        "answer": "True. Note that the sum of all the integers is at most n^2. Store the sum of all the integers in log(n^2) = 2logn = O(log n) space, and divide by n at the end of the stream.",
+        "hint": "Consider the properties of the given stream of integers and how the mean can be computed using limited space.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Explain the concept of computing the mean of a stream of integers and how it relates to the given algorithm."
+            },
+            {
+                "problem_order": 2,
+                "description": "Provide a step-by-step explanation of the algorithm and how it uses O(log n) space to compute the mean."
+            }
+        ]
+    },
+    {
+        "question_id": "Spring_2021_4",
+        "topic": "Algorithms",
+        "question_description": "If you find a polynomial time algorithm for an NP-complete problem, then you've proved P = NP.",
+        "answer": "False. We can solve addition (an NP problem) in polynomial time, but this does not imply P = NP.",
+        "hint": "Consider the relationship between polynomial time algorithms, NP-complete problems, and the P vs NP problem.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Explain the concept of polynomial time algorithms and NP-complete problems."
+            },
+            {
+                "problem_order": 2,
+                "description": "Discuss the implications of finding a polynomial time algorithm for an NP-complete problem on the P vs NP problem."
+            }
+        ]
+    },
+    {
+        "question_id": "Spring_2021_5",
+        "topic": "Algorithms",
+        "question_description": "Consider hy (x) = x and h2(x) = 1+ (x (mod 4)), both from {1,2,...,24} toitself. Then H = {h1,h2} is universal.",
+        "answer": "False. Collisions are frequent for multiples of 4, i.e. Pr[h(4) = h(8)] = 4 > 1/24.",
+        "hint": "Consider the concept of universal hashing and how it relates to the given functions.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Explain the concept of universal hashing and its properties."
+            },
+            {
+                "problem_order": 2,
+                "description": "Provide a counterexample to the given statement by showing collisions between the given functions."
+            }
+        ]
+    },
+    {
+        "question_id": "Spring_2021_6",
+        "topic": "Algorithms",
+        "question_description": "There is guaranteed to exist an O(√n) solution to the Vertex Cover problem if P = NP.",
+        "answer": "False. P = NP guarantees there is a polynomial time algorithm for Vertex Cover, but the leading exponent in the polynomial runtime may be greater than 2.",
+        "hint": "Consider the implications of P = NP on the existence of an O(√n) solution to the Vertex Cover problem.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Explain the concept of the Vertex Cover problem and its relationship to P and NP."
+            },
+            {
+                "problem_order": 2,
+                "description": "Discuss the implications of P = NP on the existence of an O(√n) solution to the Vertex Cover problem."
+            }
+        ]
+    },
+    {
+        "question_id": "Spring_2021_7",
+        "topic": "Algorithms",
+        "question_description": "Suppose that a Monte-Carlo algorithm A exists for a problem which always runs in time T(n) returns a correct answer with probability p. Then there exists a Las-Vegas algorithm that solves the problem in expected time 2T(n). (Assume a correct answer can be verified in constant time.)",
+        "answer": "True. Run A and check if the output is correct — if not, repeat until the output is correct. The finishing time of this Las-Vegas algorithm is a geometric random variable which has expectation 2T(n).",
+        "hint": "Consider the concepts of Monte-Carlo and Las-Vegas algorithms and how they relate to the given problem.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Explain the concepts of Monte-Carlo and Las-Vegas algorithms and their differences."
+            },
+            {
+                "problem_order": 2,
+                "description": "Provide a step-by-step explanation of the Las-Vegas algorithm and how it achieves an expected runtime of 2T(n)."
+            }
+        ]
+    },
+    {
+        "question_id": "Spring_2021_8",
+        "topic": "Algorithms",
+        "question_description": "Dunder Mifflin is having a corporate party, and you (head of the Party Planning Committee) want to make the party as cool as possible! Here's what you know:\n\n• Every employee in Dunder Mifflin (except the CEO) has one and only one direct boss — that is, the corporate hierarchy can be represented as a rooted tree.\n\n• Due to the awkward nature of the corporate culture, an employee will not show up to the party if their direct boss (i.e. parent node) will also be present at the party.\n\n• Each employee e has a coolness C(e). The coolness of a party is the total sum of the coolnesses of all its participants.\n\nYour task is to design an efficient dynamic programming algorithm which, given a corporate hierarchy tree, outputs the maximum possible coolness of the party.",
+        "answer": "<The entirety of the solution>",
+        "hint": "<Short hint to solve the question>",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "<Generate a subproblem based on the question to break down the question into more digestible parts>"
+            },
+            ...
+        ]
+    },
+    {
+        "question_id": "Spring_2021_9",
+        "topic": "Algorithms",
+        "question_description": "Recall from lecture that the Rudrata / Hamiltonian Cycle (RHC) problem is: given an undirected graph G, does G have a cycle (i.e. a closed loop) which visits every vertex exactly once? Consider now the Rudrata / Hamiltonian Path (RHP) problem: given an undirected graph G, does G have a path (not closed) which visits every vertex exactly once?\n\n(a) Give a reduction from RHP to RHC which has runtime polynomial in |V| and |E|. Justify correctness.\n\n(b) Give a reduction from RHC to RHP which has runtime polynomial in |V| and |E|. Justify correctness.\n\n(c) Show that RHP is NP-Complete. Clearly identify whether you used the reduction in (a) or the reduction in (b) for your proof — only one of these reductions is relevant for this part.",
+        "answer": "<The entirety of the solution>",
+        "hint": "<Short hint to solve the question>",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "<Generate a subproblem based on the question to break down the question into more digestible parts>"
+            },
+            ...
+        ]
+    },
+    {
+        "question_id": "Spring_2021_10",
+        "topic": "Algorithms",
+        "question_description": "Robin Hood and his merry band are on the run from the Sheriff! Let G = (V,E) be an undirected, unweighted graph where vertices represent towns and edges represent roads between towns. Robin's band has n members (including Robin), and each member starts in a different town s;. The objective for Robin's band is to find paths for each member which end at one of the hideouts, where the set of hideouts is given by HCV.\n\nHowever, there's a catch: No two members of Robin's band can visit the same town, since two band members passing through the same town (even at different times), would draw too much attention from the Sheriff (e.g. if Robin's path includes town tf, then Little John's path cannot include town f).\n\nNote: The above restriction applies to hideouts as well, i.e. two band members cannot end at the same hideout.",
+        "answer": "<The entirety of the solution>",
+        "hint": "<Short hint to solve the question>",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "<Generate a subproblem based on the question to break down the question into more digestible parts>"
+            },
+            ...
+        ]
+    },
+    {
+        "question_id": "Spring_2021_11",
+        "topic": "Algorithms",
+        "question_description": "Suppose T is a rooted tree (not necessarily binary) and k is an integer. Your first task is to devise an algorithm to compute the largest possible set of non-intersecting directed k-paths.\n\n• A directed k-path is a path in the tree of exactly k edges that goes strictly upwards (i.e. always from child to parent) in the tree, i.e. no path contains two children of the same node. Directed k-paths do not have to start at leaves.\n\n• By non-intersecting, we mean that distinct k-paths do not share any vertices.",
+        "answer": "<The entirety of the solution>",
+        "hint": "<Short hint to solve the question>",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "<Generate a subproblem based on the question to break down the question into more digestible parts>"
+            },
+            ...
+        ]
+    },
+    {
+        "question_id": "Spring_2021_12",
+        "topic": "Algorithms",
+        "question_description": "Consider a path graph of 3 nodes and 2 edges, where the first node has weight 10 and the second and third nodes have weight 1. If the first node is the root of the tree, then in the k = 1 case the greedy algorithm will choose only the lower (second) edge for a total node weight of 2, whereas a better option would have been to choose only the upper (first) edge for a total node weight of 11.",
+        "answer": "<The entirety of the solution>",
+        "hint": "<Short hint to solve the question>",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "<Generate a subproblem based on the question to break down the question into more digestible parts>"
+            },
+            ...
+        ]
+    },
+    {
+        "question_id": "Spring_2021_13",
+        "topic": "Algorithms",
+        "question_description": "Suppose each reward is independently drawn uniformly at random from {0,1,2,...,10}. Show that for any given rooted tree, your greedy algorithm achieves an average approximation factor of at least 3 for the problem in (b). That is, show that\n\nE[Gain] ≥ 3/4.",
+        "answer": "<The entirety of the solution>",
+        "hint": "<Short hint to solve the question>",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "<Generate a subproblem based on the question to break down the question into more digestible parts>"
+            },
+            ...
+        ]
+    }
+]

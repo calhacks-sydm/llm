@@ -1,0 +1,273 @@
+[
+    {
+        "question_id": "Fall_2017_1",
+        "topic": "Maximum Flow",
+        "question_description": "Consider the following directed graph with all edge capacities equal to 1. In the first step of Maximum-Flow algorithm, we increase the flow along S + A— D > B > F > T by one unit. Draw the residual graph after this step.",
+        "answer": "The answer is not provided.",
+        "hint": "To draw the residual graph, you need to subtract the flow along each edge from its capacity.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Calculate the flow along each edge in the original graph."
+            },
+            {
+                "problem_order": 2,
+                "description": "Subtract the flow along each edge from its capacity to get the residual capacity."
+            },
+            {
+                "problem_order": 3,
+                "description": "Draw the residual graph using the residual capacities."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2017_2",
+        "topic": "Minimum Spanning Tree",
+        "question_description": "Consider the following graph, and the list of edges in increasing order of their weights. Run Kruskal's algorithm and Prim's algorithm (starting at node E for the latter). Which are the second, fourth, and seventh edges that are added to the resultant MSTs, in each of the two algorithms?",
+        "answer": "The answer is not provided.",
+        "hint": "To find the second, fourth, and seventh edges added to the MST, you need to follow the steps of Kruskal's and Prim's algorithms and keep track of the edges added.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Implement Kruskal's algorithm to find the MST."
+            },
+            {
+                "problem_order": 2,
+                "description": "Implement Prim's algorithm starting at node E to find the MST."
+            },
+            {
+                "problem_order": 3,
+                "description": "Keep track of the edges added to the MST in each algorithm."
+            },
+            {
+                "problem_order": 4,
+                "description": "Identify the second, fourth, and seventh edges added to the MST in each algorithm."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2017_3",
+        "topic": "Vertex Cover",
+        "question_description": "Suppose 21 3 xr 3 i; ~ 3 2 3 4°C programming relaxation of vertex cover on a graph x6 3,27 3 be the optimal solution to the linear G (all vertex weights are 1). Choose the pairs of vertices that are NOT edges in the graph. Bubble in your answers. (4,5). In LP formulation of the vertex cover x, +a; > 1. So if we check this constraint solutions do not satisfy. The size of the smallest vertex cover in G is a 4. LP solution should be the lower bound of 33. Therefore the x vertex cover is 4. Choose the vertices that belong to the vertex ; we need to make sure for each two vertices i and j, 980 all edges above, (4, 5) is the only one that the LP least | 4 he optimal solution. If we sum of all x;, it sums up to cover output by the approximation algorithm. Bubble in your answers.",
+        "answer": "The answer is not provided.",
+        "hint": "To find the pairs of vertices that are not edges in the graph, you need to identify the edges in the graph and determine which pairs of vertices are not connected by an edge.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Identify the edges in the graph."
+            },
+            {
+                "problem_order": 2,
+                "description": "Determine which pairs of vertices are not connected by an edge."
+            },
+            {
+                "problem_order": 3,
+                "description": "Bubble in the pairs of vertices that are not edges in the graph."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2017_4",
+        "topic": "Zero-Sum Games",
+        "question_description": "Consider a zero-sum game given by the following matrix (indicating the payoffs to the row player). C1 | Ce | C3 Ry 2 3 [R./ 2) 2 ] 1 | Rs Suppose the column player goes second and has fixed the following probabilistic strategy: C, | Co | C3 0.3 | 0.2 | 0. an what is the best strategy for the row player going first? Ry Rg Rs",
+        "answer": "The answer is not provided.",
+        "hint": "To find the best strategy for the row player, you need to consider the payoffs in the matrix and the probabilities chosen by the column player.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Analyze the payoffs in the matrix for the row player."
+            },
+            {
+                "problem_order": 2,
+                "description": "Consider the probabilities chosen by the column player."
+            },
+            {
+                "problem_order": 3,
+                "description": "Determine the best strategy for the row player."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2017_5",
+        "topic": "Linear Programming",
+        "question_description": "Write the dual of the following linear program. max 32, + 22+ 403 + 4x4 + 25 ty +a%g+a3+a%4+%5 <2 ©, — 4% 4+ 2%34+ 344 <1 ©1,%2,%3,04,%5 > 0",
+        "answer": "The answer is not provided.",
+        "hint": "To write the dual of a linear program, you need to switch the objective function and the constraints, and change the direction of the inequalities.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Switch the objective function and the constraints."
+            },
+            {
+                "problem_order": 2,
+                "description": "Change the direction of the inequalities."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2017_6",
+        "topic": "Factoring Numbers via Circuit SAT",
+        "question_description": "Let n = 10100010101000101011111100000101010101111111111111111110000000001110000000111. Describe a circuit C (in at most two sentences), such that solving the CircuitSAT problem on the instance C will yield a factor p dividing n.",
+        "answer": "The answer is not provided.",
+        "hint": "To describe the circuit C, you need to explain how the circuit can check if a number p is a factor of n.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Explain how the circuit can check if a number p is a factor of n."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2017_7",
+        "topic": "Find the satisfying one",
+        "question_description": "You are given a 3-SAT formula and two assignment sets x1, x2 such that one of the assignment sets satisfies the formula, while the other satisfies at most 90% of the clauses in the formula. Describe an O(1)-time algorithm that finds the satisfying assignment among x1, x2 with probability 0.99.",
+        "answer": "The answer is not provided.",
+        "hint": "To find the satisfying assignment with probability 0.99, you need to randomly choose one assignment set and test it on the formula. If it satisfies all clauses, it is the satisfying assignment. Otherwise, choose the other assignment set.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Randomly choose one assignment set."
+            },
+            {
+                "problem_order": 2,
+                "description": "Test the chosen assignment set on the formula."
+            },
+            {
+                "problem_order": 3,
+                "description": "If the chosen assignment set satisfies all clauses, it is the satisfying assignment. Otherwise, choose the other assignment set."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2017_8",
+        "topic": "Updating Distances",
+        "question_description": "We have a directed graph G = (V, E), where each edge (u,v) has a length (u,v) that is a positive integer. Let n denote the number of vertices in G. Suppose we have previously computed an nxn matrix d[-,-], where for each pair of vertices (u,v) in V, d[u,v] stores the length of the shortest path from u to v in G. Now we add a single edge (a,b) to get the graph G' = (V, E'), where E = E U {(a,b)}. Let c(a,b) denote the length of the new edge. Your job is to compute a new distance matrix d'[-,-], which should be filled in so that d'[u, v] holds the length of the shortest path from u to v in G', for each u,v in V.",
+        "answer": "The answer is not provided.",
+        "hint": "To compute the new distance matrix, you need to update the distances between vertices based on the addition of the new edge.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Update the distances between vertices based on the addition of the new edge."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2017_9",
+        "topic": "Finding Bridges",
+        "question_description": "A bridge of an undirected graph G is an edge whose removal disconnects G. An edge is a bridge if and only if it is not part of any cycle. Suppose we perform a DFS of the graph G then a bridge can be (bubble all possibilities): CO Tree edge © Back edge Tree edge. Suppose we perform a DFS of the graph G starting from s. At some point during the execution of the DFS, let us suppose the current node is v;. Suppose the path from the root of DFS tree to the current node vy; is given by, S= U9 > UL > U2... > YH > and the DFS encounters a back edge v; — v; for some i < t. Which edges of the graph are definitely not bridges? All edges in the cycle: (v; + vj41),---,(Us-1 > %)-",
+        "answer": "The answer is not provided.",
+        "hint": "To determine which edges are definitely not bridges, you need to consider the path from the root of the DFS tree to the current node and identify the edges in the cycle.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Identify the path from the root of the DFS tree to the current node."
+            },
+            {
+                "problem_order": 2,
+                "description": "Identify the edges in the cycle."
+            },
+            {
+                "problem_order": 3,
+                "description": "Determine which edges are definitely not bridges."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2017_10",
+        "topic": "Gambling",
+        "question_description": "You walk into a casino. You have M dollars of money, and want to play exactly n rounds of games. Let us call it a success if at the end of the n games, you have exactly 2M dollars (no more, and no less). For each of the n rounds, you can choose to play either Game A or Game B. Game A costs $1 to play, and returns $2 with probability 0.6 (and $0 with probability 0.4). Game B costs $3 and returns $15 with probability 0.2 (and $0 with probability 0.8). We will now design a dynamic programming algorithm to compute the probability of success of the optimal strategy.",
+        "answer": "The answer is not provided.",
+        "hint": "To compute the probability of success of the optimal strategy, you need to consider the probabilities and payoffs of each game and use dynamic programming to calculate the probability of reaching exactly 2M dollars at the end of n rounds.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Consider the probabilities and payoffs of each game."
+            },
+            {
+                "problem_order": 2,
+                "description": "Use dynamic programming to calculate the probability of reaching exactly 2M dollars at the end of n rounds."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2017_11",
+        "topic": "Roadside Assistance",
+        "question_description": "You are the CEO of a towing company that serves a network of roads connecting n cities. The road network is given by an undirected graph G = (V, E) where V = {1,...,n} is the set of cities, and E denotes the set of roads connecting pairs of cities in V. On each road (i,j) in E, there are wi,j accidents that occur each day, which need road-side assistance. An accident occurring on road (i,j) can only be serviced by a tow-truck from city i or city j. Each accident needs exactly one tow-truck for assistance. At each city i, the company parks ti tow-trucks. Describe a polynomial-time algorithm to determine whether the company can service all the accidents. If so, determine how the company should service the accidents, i.e., For each road (i,j) in E, the algorithm must determine how many of the wi,j accidents on the road are assisted by trucks from i, and how many by trucks from j.",
+        "answer": "The answer is not provided.",
+        "hint": "To determine whether the company can service all the accidents, you need to consider the number of tow-trucks available at each city and the number of accidents on each road. Use a polynomial-time algorithm to find a solution if it exists.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Consider the number of tow-trucks available at each city."
+            },
+            {
+                "problem_order": 2,
+                "description": "Consider the number of accidents on each road."
+            },
+            {
+                "problem_order": 3,
+                "description": "Use a polynomial-time algorithm to determine whether the company can service all the accidents."
+            },
+            {
+                "problem_order": 4,
+                "description": "If a solution exists, determine how many accidents on each road are assisted by trucks from each city."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2017_12",
+        "topic": "Complete the sentences",
+        "question_description": "Complete the sentences: (26 points)",
+        "answer": "The answer is not provided.",
+        "hint": "To complete the sentences, you need to fill in the missing words or phrases that make the sentences grammatically and logically correct.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Fill in the missing words or phrases to complete the sentences."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2017_13",
+        "topic": "True or False?",
+        "question_description": "True or false? (12 points)",
+        "answer": "The answer is not provided.",
+        "hint": "To determine whether the statements are true or false, you need to evaluate the statements based on your knowledge of the topics.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Evaluate the statements and determine whether they are true or false."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2017_14",
+        "topic": "True or False or Maybe..?",
+        "question_description": "True or False or Maybe..? (12 points)",
+        "answer": "The answer is not provided.",
+        "hint": "To determine whether the statements are true, false, or uncertain, you need to evaluate the statements based on your knowledge of the topics.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Evaluate the statements and determine whether they are true, false, or uncertain."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2017_15",
+        "topic": "NP-completeness",
+        "question_description": "Note: By 'reduction' in this exam it is always meant 'polynomial-time reduction.' For the reductions in Problem ?? mention the problem you are using, direction and construction of the reduction). Also, when you are asked to show that a problem is NP-complete, no need to show that it is in NP, unless asked to do so. 'You may assume that the following problems are known to be NP-hard. Rudrata Path or Hamiltonian Path Hamiltonian Cycle Vertex Cover Independent Set 3-SAT CircuitSAT Integer Programming Clique 3D-Matching 4-SAT 3-Coloring",
+        "answer": "The answer is not provided.",
+        "hint": "To show that a problem is NP-complete, you need to provide a reduction from a known NP-hard problem to the given problem.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Choose a known NP-hard problem to reduce from."
+            },
+            {
+                "problem_order": 2,
+                "description": "Describe the direction and construction of the reduction."
+            }
+        ]
+    }
+]

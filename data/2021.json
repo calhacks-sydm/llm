@@ -1,0 +1,288 @@
+[
+    {
+        "question_id": "Fall_2019_1",
+        "topic": "Algorithms",
+        "question_description": "Execute a DFS on the directed graph shown below starting at node A and breaking ties alphabetically. Fill in the table of pre and post values.",
+        "answer": "Node A: pre = 1, post = 12\nNode B: pre = 2, post = 9\nNode Cc: pre = 4, post = 5\nNode D: pre = 6, post = 7\nNode E: pre = 13, post = 18\nNode F: pre = 10, post = 11\nNode G: pre = 3, post = 8\nNode H: pre = 14, post = 17\nNode J: pre = 15, post = 16",
+        "hint": "Start at node A and explore the graph using Depth-First Search (DFS). Keep track of the order in which nodes are visited.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "What is the pre and post value for node A?"
+            },
+            {
+                "problem_order": 2,
+                "description": "What is the pre and post value for node B?"
+            },
+            {
+                "problem_order": 3,
+                "description": "What is the pre and post value for node Cc?"
+            },
+            {
+                "problem_order": 4,
+                "description": "What is the pre and post value for node D?"
+            },
+            {
+                "problem_order": 5,
+                "description": "What is the pre and post value for node E?"
+            },
+            {
+                "problem_order": 6,
+                "description": "What is the pre and post value for node F?"
+            },
+            {
+                "problem_order": 7,
+                "description": "What is the pre and post value for node G?"
+            },
+            {
+                "problem_order": 8,
+                "description": "What is the pre and post value for node H?"
+            },
+            {
+                "problem_order": 9,
+                "description": "What is the pre and post value for node J?"
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2019_2",
+        "topic": "Algorithms",
+        "question_description": "In the DFS execution from above, mark the following edges as T for Tree, F for Forward, B for Back, and C for Cross.",
+        "answer": "Edge AB: Type = T\nEdge Cc: Type = B\nEdge CB: Type = C\nEdge B: Type = T\nEdge A-D: Type = F\nEdge F: Type = T\nEdge H->J: Type = T",
+        "hint": "Based on the pre and post values of the nodes, determine the type of each edge.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "What is the type of the edge AB?"
+            },
+            {
+                "problem_order": 2,
+                "description": "What is the type of the edge Cc?"
+            },
+            {
+                "problem_order": 3,
+                "description": "What is the type of the edge CB?"
+            },
+            {
+                "problem_order": 4,
+                "description": "What is the type of the edge B?"
+            },
+            {
+                "problem_order": 5,
+                "description": "What is the type of the edge A-D?"
+            },
+            {
+                "problem_order": 6,
+                "description": "What is the type of the edge F?"
+            },
+            {
+                "problem_order": 7,
+                "description": "What is the type of the edge H->J?"
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2019_3",
+        "topic": "Algorithms",
+        "question_description": "List the strongly connected components of the above graph in a linearized order.",
+        "answer": "SCC no. 1: Vertices in the component\nSCC no. 2: Vertices in the component\nSCC no. 10: Vertices in the component",
+        "hint": "Use the pre and post values of the nodes to identify the strongly connected components.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "List the vertices in the first strongly connected component."
+            },
+            {
+                "problem_order": 2,
+                "description": "List the vertices in the second strongly connected component."
+            },
+            {
+                "problem_order": 3,
+                "description": "List the vertices in the tenth strongly connected component."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2019_4",
+        "topic": "Algorithms",
+        "question_description": "Write a recurrence relation for the runtime of the given code snippet.",
+        "answer": "T(n) = 2T(n/7) + O(n)",
+        "hint": "Identify the recursive calls in the code and determine their runtime.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Write the recurrence relation for the runtime of the code snippet."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2019_5",
+        "topic": "Algorithms",
+        "question_description": "Consider the execution of the linear-time selection algorithm to find the median element of the given array. Answer the following questions:",
+        "answer": "1. The best possible value of the first pivot element is 5.\n2. An example of the worst possible sequence of choices of pivot elements is 1,2,3,4,9,8,7,6,5.\n3. The best possible value of the first pivot if the input was the given array is 1.",
+        "hint": "Analyze the given array and the properties of the linear-time selection algorithm.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "What is the best possible value of the first pivot element?"
+            },
+            {
+                "problem_order": 2,
+                "description": "Give an example of the worst possible sequence of choices of pivot elements."
+            },
+            {
+                "problem_order": 3,
+                "description": "What is the best possible value of the first pivot if the input was the given array?"
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2019_6",
+        "topic": "Algorithms",
+        "question_description": "Consider the directed graph shown below. Indicate whether each of the given subsets of post-values is possible or impossible.",
+        "answer": "Table 1: Possible\nTable 2: Impossible",
+        "hint": "Analyze the graph and the given subsets of post-values.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Is Table 1 possible or impossible?"
+            },
+            {
+                "problem_order": 2,
+                "description": "Is Table 2 possible or impossible?"
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2019_7",
+        "topic": "Algorithms",
+        "question_description": "Consider the undirected graph shown below. Answer the following questions:",
+        "answer": "1. There are 6 edges that are necessarily heavier than the edge FE.\n2. There are 3 edges that are necessarily lighter than the edge DH.\n3. The smallest possible value of k is 2.",
+        "hint": "Analyze the graph and the given edge weights.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "How many edges are necessarily heavier than the edge FE?"
+            },
+            {
+                "problem_order": 2,
+                "description": "How many edges are necessarily lighter than the edge DH?"
+            },
+            {
+                "problem_order": 3,
+                "description": "What is the smallest possible value of k?"
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2019_8",
+        "topic": "Algorithms",
+        "question_description": "Assume that the capacity of every edge in the graph below is equal to 1. How many distinct minimum cuts are there in the graph with source S and sink T?",
+        "answer": "There are 12 distinct minimum cuts in the graph.",
+        "hint": "Analyze the graph and the concept of minimum cuts.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "How many distinct minimum cuts are there in the graph?"
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2019_9",
+        "topic": "Algorithms",
+        "question_description": "Answer the following questions about Kruskal and Prim's algorithms:",
+        "answer": "1. The first 4 edges that Kruskal's algorithm includes in the tree are AB, EH, AD, and FG.\n2. The first 4 edges that Prim's algorithm starting at A includes in the tree are AB, AD, GD, and FG.",
+        "hint": "Analyze the given graph and the steps of Kruskal and Prim's algorithms.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "What are the first 4 edges that Kruskal's algorithm includes in the tree?"
+            },
+            {
+                "problem_order": 2,
+                "description": "What are the first 4 edges that Prim's algorithm starting at A includes in the tree?"
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2019_10",
+        "topic": "Algorithms",
+        "question_description": "Answer the following questions about a two-player game:",
+        "answer": "1. Depending on the heights of soldiers, A can be taller than B or vice versa.\n2. A is always at least as tall as B.\n3. B is always at least as tall as A.",
+        "hint": "Analyze the rules of the two-player game.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Is it possible for A to be taller than B or vice versa?"
+            },
+            {
+                "problem_order": 2,
+                "description": "Is A always at least as tall as B?"
+            },
+            {
+                "problem_order": 3,
+                "description": "Is B always at least as tall as A?"
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2019_11",
+        "topic": "Algorithms",
+        "question_description": "Answer the following questions about the given code snippet:",
+        "answer": "1. The first line number for which the code behaves differently from the distinct elements algorithm given in class is 4.\n2. To make the estimate for the number of distinct elements correct, line 5 of the buggy code should be modified to 'a = 1'.",
+        "hint": "Analyze the given code and identify the line where it behaves differently from the distinct elements algorithm.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "What is the first line number for which the code behaves differently from the distinct elements algorithm given in class?"
+            },
+            {
+                "problem_order": 2,
+                "description": "How should line 5 of the buggy code be modified to make the estimate for the number of distinct elements correct?"
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2019_12",
+        "topic": "Algorithms",
+        "question_description": "Answer the following true/false questions about various topics:",
+        "answer": "1. True\n2. True\n3. False\n4. False\n5. True\n6. False\n7. True",
+        "hint": "Analyze the given statements and determine their truth value.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Is the statement 'Minimum Spanning Tree problem is not NP-complete' true or false?"
+            },
+            {
+                "problem_order": 2,
+                "description": "Does CircuitSAT reduce to 3-SAT?"
+            },
+            {
+                "problem_order": 3,
+                "description": "Does 3-SAT reduce to CircuitSAT?"
+            },
+            {
+                "problem_order": 4,
+                "description": "Does every NP problem reduce to integer programming?"
+            },
+            {
+                "problem_order": 5,
+                "description": "Does 3-SAT reduce to HornSAT?"
+            },
+            {
+                "problem_order": 6,
+                "description": "Does a graph with edge weights contain a cycle C, then the edge with the largest weight on C cannot be in any minimum spanning tree?"
+            },
+            {
+                "problem_order": 7,
+                "description": "Does Dijkstra's algorithm on a graph always return the correct shortest path distances while updating each edge once?"
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2019_13",
+        "topic": "Algorithms",
+        "question_description": "Fill in the blanks with the appropriate answers:",
+        "answer": "1. The node that receives the highest | post (pre/post) number in a depth-first search must lie in a | source (source/sink) strongly connected component.\n2. For a degree n - 1 polynomial p(x), its evaluation p(0) can be computed in time | O(n log n).\n3. Recall the linear programming relaxation for Vertex Cover problem. Suppose the optimal vertex cover in a graph G is of size a, while the optimal solution to the LP relaxation has value b, then, a + b = | n.\n4. Let h: {1,...,n} -> {1,...,1000} be a hash function chosen uniformly from a pairwise independent hash family H. Then for a pair i != j, Pr[h(i) < 300 and h(j) > 700] = | 0.09.\n5. Suppose an element occurs f times in a stream, then the count-min algorithm's estimate for its frequency is | > f.\n6. In union/find data structure of n items, if we use union by size without path compression then any combination of m unions and/or find operations takes at most | O(m log n) time.\n7. Suppose a graph G with edge weights contains a cycle C, then the edge with the largest weight on C cannot be in any minimum spanning tree. | True\n8. Let G = (V,E) be a graph with edge weights w, for each edge e in E, and a unique minimum spanning tree T. Here the edge weights can be positive or negative. Suppose we change the edge weights to w', = w + 2 for each edge e in E, then T is also a minimum spanning tree for the new weights w'. | True\n9. Consider a graph G all of whose edge weights are either positive integers or are equal to -1. Dijkstra's algorithm on G will always return the correct shortest path distances while updating each edge once. | False\n10. Suppose all the capacities in a graph are even numbers then the value of Maximum Flow is an even number. | True\n11. Suppose all the capacities in a graph are odd numbers then the value of Maximum Flow is an odd number. | False\n12. The knapsack problem can be approximated to a factor of 1 + 10^-6 in polynomial time. | False\n13. For the multiplicative weights algorithm with e > 0 on n experts whose losses in the range (0, 1] (each expert always has a non-zero loss), the potential function which is the sum of the weights of all the experts is strictly | decreasing.\n14. Let G = (V,E) be a graph with edge weights w, for each edge e in E, and a unique minimum spanning tree T. Here the edge weights can be positive or negative. Suppose we change the edge weights to w', = w^2 for each edge e in E, then T is also a minimum spanning tree for the new weights w'. | False\n15. Let G = (V,E) be a graph with edge weights w, for each edge e in E, and a unique minimum spanning tree T. Here the edge weights can be positive or negative. Suppose we change the edge weights to w', = 2 for each edge e in E, then T is also a minimum spanning tree for the new weights w'. | True\n16. Suppose a graph G with edge weights contains a cycle C, then the edge with the largest weight on C cannot be in any minimum spanning tree. | True\n17. Let G = (V,E) be a graph with edge weights w, for each edge e in E, and a unique minimum spanning tree T. Here the edge weights can be positive or negative. Suppose we change the edge weights to w', = w^2 for each edge e in E, then T is also a minimum spanning tree for the new weights w'. | False\n18. Let G = (V,E) be a graph with edge weights w, for each edge e in E, and a unique minimum spanning tree T. Here the edge weights can be positive or negative. Suppose we change the edge weights to w', = 2 for each edge e in E, then T is also a minimum spanning tree for the new weights w'. | True\n19. Consider a graph G all of whose edge weights are either positive integers or are equal to -1. Dijkstra's algorithm on G will always return the correct shortest path distances while updating each edge once. | False\n20. Suppose all the capacities in a graph are even numbers then the value of Maximum Flow is an even number. | True\n21. Suppose all the capacities in a graph are odd numbers then the value of Maximum Flow is an odd number. | False\n22. The knapsack problem can be approximated to a factor of 1 + 10^-6 in polynomial time. | False\n23. For the multiplicative weights algorithm with e > 0 on n experts whose losses in the range (0, 1] (each expert always has a non-zero loss), the potential function which is the sum of the weights of all the experts is strictly decreasing. | True\n24. Let G = (V,E) be a graph with edge weights w, for each edge e in E, and a unique minimum spanning tree T. Here the edge weights can be positive or negative. Suppose we change the edge weights to w', = w^2 for each edge e in E, then T is also a minimum spanning tree for the new weights w'. | False\n25. Let G = (V,E) be a graph with edge weights w, for each edge e in E, and a unique minimum spanning tree T. Here the edge weights can be positive or negative. Suppose we change the edge weights to w', = 2 for each edge e in E, then T is also a minimum spanning tree for the new weights w'. | True\n26. Suppose a graph G with edge weights contains a cycle C, then the edge with the largest weight on C cannot be in any minimum spanning tree. | True\n27. Consider a graph G all of whose edge weights are either positive integers or are equal to -1. Dijkstra's algorithm on G will always return the correct shortest path distances while updating each edge once. | False\n28. Suppose all the capacities in a graph are even numbers then the value of Maximum Flow is an even number. | True\n29. Suppose all the capacities in a graph are odd numbers then the value of Maximum Flow is an odd number. | False\n30. The knapsack problem can be approximated to a factor of 1 + 10^-6 in polynomial time. | False\n31. For the multiplicative weights algorithm with e > 0 on n experts whose losses in the range (0, 1] (each expert always has a non-zero loss), the potential function which is the sum of the weights of all the experts is strictly decreasing. | True\n32. Let G = (V,E) be a graph with edge weights w, for each edge e in E, and a unique minimum spanning tree T. Here the edge weights can be positive or negative. Suppose we change the edge weights to w', = w^2 for each edge e in E, then T is also a minimum spanning tree for the new weights w'. | False"
+    }
+]

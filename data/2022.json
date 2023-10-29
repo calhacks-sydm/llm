@@ -1,0 +1,140 @@
+[
+    {
+        "question_id": "Fall_2019_2",
+        "topic": "Algorithms",
+        "question_description": "What is the runtime of the following piece of code? Write the recurrence.\n\nFunction what(n) {\n\n. Runtime =\n\nwhat (n/2)\nwhat (n/2)\nk=n\nWhile (k > 1) {\nfor i=1,2,3,..,k {\nfor j=1,2,3,..,5 {\n\nprint BLAH\n}\n}\nk=k/A4\nwhat (n/2)\nwhat (n/2)\n\n. Recurrence Relation",
+        "answer": "T(n) = 4T(1/2) + O(n).\nThere are 4 calls to the recursive what with parameter n/2.\nThe two inner for-loops take O(k*) time. We do this for k = n,n/4,n/16,...,n/(4!\xc2\xb084"). So our total run-time is n? + (n/4)* +...+ (n/(4!\xc2\xb084"))? = n?(1+1/16 + 1/167 + ...). This is n? multiplied by a geometric series, so it is O(n\xe2\x80\x9d).\n\nSolution: T(n) = O(n? log n).\nUse the master theorem:\nThm. If T(1) = aT(n/b) + O(n") for some constants a > 0,b > 1, and d > 0, then\n\nO(n") ifd > log,a\n\nT(n) = 4 O(n\xe2\x80\x98 logn) ifd =log,a\nO(n\'%") \xe2\x80\x94 ifd < log,a\n\nIn this case, a = 4, b = 2,d = 2,sod = 2 = log, 4 = log, a, and the third case applies, so T(n) = O(n? logn).",
+        "hint": "Use the master theorem to analyze the runtime of the code.",
+        "subproblem": [
+            {
+                "problem_order": 1,
+                "description": "Write the recurrence relation for the runtime of the code."
+            },
+            {
+                "problem_order": 2,
+                "description": "Apply the master theorem to analyze the runtime."
+            }
+        ]
+    },
+    {
+        "question_id": "Fall_2019_3",
+        "topic": "Data Structures",
+        "question_description": "Here is the state of the count-min sketch data structure after it has processed a stream of items.\n\nHash function; | 10} 5/3 ,2/17/1]/1] 1\nHash functionh2 | 10 |6|2/4]6]4]4] 4\nHash function hz | 13 [3 | 3]6] 1 [4 | 4 | 6\nHash functionhy | 1 |2/3/4] 5 16{9 1] 10\n\nFor an element A,\nestimate(A) denote\n\net trueCount(A) denote the total number of occurrences of A in the stream, and let\nhe estimate of the number of occurrences of A as per the count-min data structure.",
+        "answer": "During the exam as a correction, the last element of the row corresponding to the hash function hz was made into 6.\n\nFor an element A, estimate(A) denotes the estimate of the number of occurrences of A as per the count-min data structure.\ntrueCount(A) denotes the total number of occurrences of A in the stream.",
+        "hint": "The count-min sketch is used to estimate the number of occurrences of an element in a stream.",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2019_4",
+        "topic": "Algorithms",
+        "question_description": "Every network with integer edge capacities has a maximum flow where the amount of flow on each edge is an integer. Briefly justify.",
+        "answer": "We know that the Edmonds-Karp max-flow algorithm computes a maximum flow. It starts with zero flow, so all flow values are integers. Each time we push flow along a new path, the remaining flow we can push is an integer, so the flow values remain integers. Then the max flow Edmonds-Karp computes has only integer flow values.",
+        "hint": "Consider how the Edmonds-Karp algorithm works and how it maintains integer flow values.",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2019_5",
+        "topic": "Graph Theory",
+        "question_description": "Let G = (V,E) be a network with source s and sink t. Note that G may have more than one minimum s-t cut and more than one maximum s-t flow.\n\nFor each of the following, let B be the value of the maximum s-t flow of G. Fill the appropriate circle in each of following cases.",
+        "answer": "1. Let e be an edge across a minimum s-t cut. Suppose we decrement the capacity of edge e by 1, the value of the maximum s-t flow in the resulting network is B-1.\n2. Let e be an edge on one of the maximum s-t flows. Suppose we decrement the capacity of edge e by 1, the value of the maximum flow in the new network is B-1.",
+        "hint": "Consider the effect of decreasing the capacity of an edge on the maximum s-t flow.",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2019_6",
+        "topic": "Dynamic Programming",
+        "question_description": "A dynamic programming algorithm has inputs X[1,...,\xe2\x80\x9d] and Y[{1,...,n], subproblems Eji, j] for all i,j \xe2\x82\xac\n\n{1,..\n\n.,n},and the following recurrence relation,\n\nEfi-1,j-1)+1 if X[]=Y{[j-1]\nEfi,j) =min 4 Efi\xe2\x80\x942,[j/2|]+3 if X[] = Y{j\nEi-1j+1+1 if X{i+1) =Y{j+5]\n\n1. Fill in the blanks in the following pseudocode for the DP algorithm.",
+        "answer": "for |i| from 1 to n do {\n\nfor |j| from 1 to n do {\n\nEfi-1,j-1)+1 if X[])=Y{[j-1]\nEli, j] = min \xc2\xa2 Eli \xe2\x80\x94 2, j/2] + 3if X[i] = Y[j]\nEfi-\xe2\x80\x941,j+1)+1if X[i+1]=Yij+5]\n\n}\n\nSolution: We must put i and j in these boxes because they are used to compute the recurrence. It cannot be j first, then i, because E/i, j] depends on both j + 1 and j \xe2\x80\x94 1.",
+        "hint": "Consider the dependencies between the subproblems in the recurrence relation.",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2019_7",
+        "topic": "NP-Completeness",
+        "question_description": "For each of the following questions, there are four options:\n\n(1) True (T); (2) False (F); (3) True if and only if P = NP; (4) True if and only if P 4 NP.\nCircle one for each question.",
+        "answer": "1. There is a reduction from Independent Set to the Longest Increasing Subsequence problem. - F\n2. Every problem in P reduces to the 3-SAT problem. - T\n3. Every problem in NP reduces to the 3-SAT problem. - T\n4. 3-SAT problem reduces to every NP-complete problem. - T\n5. The 3-SAT problem reduces to some problem in P. - T",
+        "hint": "Consider the definitions of the complexity classes P and NP and the concept of reductions.",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2019_8",
+        "topic": "True/False",
+        "question_description": "True/False. (14 pts)\n\n1. The worst case complexity of the simplex algorithm for linear programming is exponential, but linear programming is in P. - T\n2. For every directed graph, there exists a starting point v, such that calling the explore(v) routine in DFS will visit every node in the graph. - F\n3. For every directed graph and for each SCC in the graph, there exists a starting point v, such that calling the explore(v) routine will visit every node in that SCC of the graph. - T\n4. 3-SAT problem reduces to every NP-complete problem. - T\n5. The 3-SAT problem reduces to some problem in P. - T",
+        "answer": "1. True\n2. False\n3. True\n4. True\n5. True",
+        "hint": "Consider the definitions and properties of the concepts mentioned in the statements.",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2019_9",
+        "topic": "Dynamic Programming",
+        "question_description": "Fill in the Blanks (24 points)\n\nWhen asked for a bound, always give the tightest exact bound possible, not an asymptotic one. Some questions have choices in parentheses after the answer box.\n\n1. w > 5.\n\n2. The smallest possible value of k is 3.\n\n3. The value of the maximum s-t flow in the resulting network is B-1.\n\n4. Every problem in NP reduces to the 3-SAT problem.\n\n5. The size of the minimum vertex cover is at most 2k.\n\n6. The probability that 1(100) = h(10)? +5 mod p is at most a.\n\n7. The worst possible regret of the multiplicative weights algorithm run for T steps is R < 8VTInn.\n\n8. The entirety of the question is the question_description.\n\n9. The entirety of the solution is the answer.\n\n10. Generate a subproblem based on the question to break down the question into more digestible parts.",
+        "answer": [
+            {
+                "question_id": "Fall_2019_9_1",
+                "topic": "Dynamic Programming",
+                "question_description": "What is the smallest possible value of k?",
+                "answer": "3"
+            },
+            {
+                "question_id": "Fall_2019_9_2",
+                "topic": "Dynamic Programming",
+                "question_description": "What is the value of the maximum s-t flow in the resulting network?",
+                "answer": "B-1"
+            },
+            {
+                "question_id": "Fall_2019_9_3",
+                "topic": "Dynamic Programming",
+                "question_description": "What is the size of the minimum vertex cover?",
+                "answer": "2k"
+            },
+            {
+                "question_id": "Fall_2019_9_4",
+                "topic": "Hash Functions",
+                "question_description": "What is the probability that 1(100) = h(10)? +5 mod p?",
+                "answer": "a"
+            },
+            {
+                "question_id": "Fall_2019_9_5",
+                "topic": "Multiplicative Weights",
+                "question_description": "What is the worst possible regret of the multiplicative weights algorithm?",
+                "answer": "R < 8VTInn"
+            },
+            {
+                "question_id": "Fall_2019_9_6",
+                "topic": "Dynamic Programming",
+                "question_description": "What is the entirety of the question?",
+                "answer": "The question_description"
+            },
+            {
+                "question_id": "Fall_2019_9_7",
+                "topic": "Dynamic Programming",
+                "question_description": "What is the entirety of the solution?",
+                "answer": "The answer"
+            },
+            {
+                "question_id": "Fall_2019_9_8",
+                "topic": "Dynamic Programming",
+                "question_description": "Generate a subproblem based on the question to break down the question into more digestible parts.",
+                "answer": "Generate a subproblem based on the question to break down the question into more digestible parts."
+            }
+        ],
+        "hint": "Consider the given information and fill in the blanks with the correct answers.",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2019_10",
+        "topic": "Algorithms",
+        "question_description": "An instance of TSP consists of 1 cities and distances d|-, -] between every pair of cities. The distances may not satisfy the triangle inequality. A TSP tour is a path that visits every city exactly once.\n\nThere are (1 \xe2\x80\x94 1)! possible TSP tours in any instance with n cities. Finding the TSP tour that has the smallest total length among all these (n \xe2\x80\x94 1)! tours is NP-hard. For distances that don\xe2\x80\x99t satisfy the triangle inequality, there are no approximation algorithms for the problem either.\n\nLet us say that a TSP tour is Better-Than-Most if its cost is smaller than 99% of the (n \xe2\x80\x94 1)! possible TSP tours.\n\nMatt receives an input string x[1,...,n]. Design an algorithm to find the minimum number of character deletions (n\xc2\xb0) needed to make x into a valid message.",
+        "answer": "To find the minimum number of character deletions needed to make x into a valid message, we can use the following algorithm:\n\n1. Initialize a variable count to 0.\n2. Iterate through the characters of x from index 1 to n-1.\n3. If the current character is equal to the previous character, increment count by 1.\n4. Return count as the minimum number of character deletions needed to make x into a valid message.",
+        "hint": "Consider the definition of a valid message and how to identify consecutive repeated characters.",
+        "subproblem": []
+    },
+    {
+        "question_id": "Fall_2019_11",
+        "topic": "Graph Theory",
+        "question_description": "Dee is texting Matt using her faulty phone that inserts spurious characters into the message. To cope with these spurious characters, Dee repeats her message twice. We will devise an algorithm for Matt to recover Dee\xe2\x80\x99s message from what he receives.\n\nFormally, call a string Y to be a valid message if Y consists of some string w repeated twice, i.e., Y is w concatenated with w for some string w.\n\nMatt receives an input string x[1,...,n]. Design an algorithm to find the minimum number of character deletions (n\xc2\xb0) needed to make x into a valid message. Your algorithm should take time at most O(1).",
+        "answer": "To find the minimum number of character deletions needed to make x into a valid message, we can use the following algorithm:\n\n1. Initialize a variable count to 0.\n2. Iterate through the characters of x from index 1 to n-1.\n3. If the current character is equal to the character at index i+n/2, increment count by 1.\n4. Return count as the minimum number of character deletions needed to make x into a valid message.",
+        "hint": "Consider the definition of a valid message and how to identify the characters that need to be deleted.",
+        "subproblem": []
+    }
+]

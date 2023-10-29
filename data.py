@@ -4,7 +4,7 @@ from simplify import runSimplifyllm
 from explainer import runExplainerllm
 #PROBLEMS- 2016,2018
 #2017 dates wrong
-f = open('data/2015.json')
+f = open('data/2021.json')
 new_data_list=[]
 data = json.load(f)
 for question in data:
@@ -26,7 +26,7 @@ for question in data:
     question["subproblem"]= subproblemList
     explained= runExplainerllm(problem,answer)
     question["simplifiedAns"]= explained
-    jj=open("data/2015_new.json","w")
+    jj=open("data/2021_new.json","w")
     json.dump(data,jj)
     jj.close()
 f.close()

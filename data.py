@@ -2,9 +2,8 @@ import json
 from categorise import runCategorisellm
 from simplify import runSimplifyllm
 from explainer import runExplainerllm
-#PROBLEMS- 2016,2018
-#2017 dates wrong
-f = open('data/2021.json')
+
+f = open('data/2024.json')
 new_data_list=[]
 data = json.load(f)
 for question in data:
@@ -18,15 +17,13 @@ for question in data:
     question["hint"]= hint
     sp1= simplifyDict["sub_problem 1"]
     sp2= simplifyDict["sub_problem 2"]
-   # sp3= simplifyDict["sub_problem 3"]
     subproblemList=[]
     subproblemList.append(sp1)
     subproblemList.append(sp2)
-    #subproblemList.append(sp3)
     question["subproblem"]= subproblemList
     explained= runExplainerllm(problem,answer)
     question["simplifiedAns"]= explained
-    jj=open("data/2021_new.json","w")
+    jj=open("data/2024_new.json","w")
     json.dump(data,jj)
     jj.close()
 f.close()
